@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jmanzanares.github.io/pasteleria_l",
+  "homepage": "https://jmanzanares12.github.io/pasteleria_l",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
