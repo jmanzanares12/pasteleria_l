@@ -1,14 +1,18 @@
 import React from "react";
 import '../styles/footerApp.css';
-import {Phone, Email, LocationOn, WhatsApp, Facebook} from '@mui/icons-material';
+import { Phone, Email, LocationOn, WhatsApp, Facebook } from '@mui/icons-material';
 import logo from '../images/logo.svg'
 
 function FooterApp() {
-    return(
+    return (
         <>
             <footer className="footerApp">
-                <div className="generalApp">
+                <div className="logoApp">
+                    <h2>Pasteleria Lilliam</h2>
                     <img src={logo} alt="logo" />
+                </div>
+                <div className="generalApp">
+                    <h3>Contactanos</h3>
                     <Phone /> +505 8817 4854
                     <Phone /> +505 8880 4173
                     <Email /> lilliamgaitanflores@gmail.com
@@ -24,7 +28,7 @@ function FooterApp() {
                 </div>
             </footer>
         </>
-    )   
+    )
 }
 
 export default FooterApp;

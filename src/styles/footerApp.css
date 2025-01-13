@@ -1,0 +1,46 @@
+.footerApp{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: linear-gradient(90deg, #007BFF, #00D4FF);
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logoApp h2{
+    font-size: 1.6rem;;
+    margin-bottom: 10px;
+}
+.logoApp img{
+    height: 80px;
+    cursor: pointer;
+}
+
+.material-icons {
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.generalApp{
+    display: grid;
+    align-items: center;
+}
+
+.generalApp ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.generalApp ul li{
+    margin-bottom: 10px;
+}
+
+.generalApp ul li a{
+    text-decoration: none;
+    color: #fff;
+}
