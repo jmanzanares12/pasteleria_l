@@ -1,25 +1,27 @@
 import React from "react";
 import '../styles/footerApp.css';
+import {Phone, Email, LocationOn, WhatsApp, Facebook} from '@mui/icons-material';
 import logo from '../images/logo.svg'
 
 function FooterApp() {
     return(
         <>
             <footer className="footerApp">
-                <div className="imgApp">
+                <div className="generalApp">
                     <img src={logo} alt="logo" />
+                    <Phone /> +505 8817 4854
+                    <Phone /> +505 8880 4173
+                    <Email /> lilliamgaitanflores@gmail.com
+                    <LocationOn /> Barrio Camilo Ortega II Etapa, Frente al Museo Camilo Ortega
                 </div>
-                <div className="addressApp">
+                <div className="aboutUsApp">
+                    <h3>Sobre nosotros</h3>
                     <ul>
-                        <li>Barrio Camilo Ortega II Etapa, Frente al Museo Camilo Ortega, Masaya.</li>
-                        <li>Barrio Camilo Ortega II Etapa, Del Museo Camilo Ortega 25 metros al este, Masaya.</li>
-                        <li>Mercado Municipal Ernesto Fernandez, Sector Pastelero, Masaya</li>
-                        <li>Calle Atravezada, Frente a Financiera Fama, Granada</li>
-                        <li>Entrada Principal de Diriomo, 50 metros al este, Diriomo.</li>
+                        <li><a href="">Quienes somos</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contactanos</a></li>
                     </ul>
                 </div>
-
-
             </footer>
         </>
     )   
