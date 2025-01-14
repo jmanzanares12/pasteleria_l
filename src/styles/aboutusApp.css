@@ -1,61 +1,74 @@
 .sectionApp{
-    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:20px;
+    padding: 20px;
+    text-align: center;
 }
 
-.sectionApp .aboutUs{
-    background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 30px;
+.aboutUs{
+    background: linear-gradient(90deg, #a5eff5, #e5fdfd);
+    padding: 5%;
+    margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 .aboutUs h3 {
     font-size: 1.8rem;
-    color: #333;
+    color: #2c2c2c;
     margin-bottom: 10px;
 }
 
 .aboutUs p {
     font-size: 1rem;
-    color: #555;
+    color: #000000;
     line-height: 1.6;
 }
 
 .sectionApp .aboutUs h3{
     font-size: 1.8rem;
-    color: #333;
+    color: #000000;
     line-height: 1.6;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-.mission, .vission{
-    background-color: #fffcfc;
+.container .mission, .container .vission{
+    background: linear-gradient(90deg, #e5fdfd, #a5eff5);
     padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .mission h3, .vission h3{
     font-size: 1.6rem;
-    color:#333;
+    color:#000000;
     margin-bottom: 10px;
 }
 
 .mission p, .vission p{
     font-size: 1rem;
-    color:#333;
+    color:#000000;
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .container {
+/* Ajustes para pantallas grandes */
+@media (min-width: 1024px) {
+    .sectionApp {
         grid-template-columns: 1fr;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto; 
     }
 }

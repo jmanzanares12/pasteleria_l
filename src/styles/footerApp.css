@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    background: linear-gradient(90deg, #0666ce, #189eb9);
+    background: linear-gradient(90deg, #55a6fc, #1866b9);
     padding: 15px 30px;
     color: #fff;
     border-radius: 10px;
@@ -29,11 +29,11 @@
 }
 
 .contactItem {
-    display: flex; /* Flexbox para alinear ícono y texto en línea */
-    align-items: center; /* Alinea verticalmente el ícono y el texto */
-    gap: 10px; /* Espaciado entre el ícono y el texto */
-    font-size: 1rem; /* Tamaño del texto */
-    color: #fff; /* Color del texto */
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-size: 1rem; 
+    color: #fff;
 }
 
 .generalApp h3 {
