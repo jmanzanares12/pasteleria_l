@@ -7,40 +7,90 @@
     color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: start;
+    text-align: left;
 }
 
 .logoApp h2{
     font-size: 1.6rem;;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 .logoApp img{
     height: 80px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
-.material-icons {
+.generalApp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.generalApp h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.generalApp svg {
     font-size: 24px;
     margin-right: 10px;
     vertical-align: middle;
     color: #fff;
 }
 
-.generalApp{
-    display: grid;
-    align-items: center;
-}
-
-.generalApp ul{
+.aboutUsApp ul{
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.generalApp ul li{
+.aboutUsApp ul li{
     margin-bottom: 10px;
 }
 
-.generalApp ul li a{
+.aboutUsApp ul li a{
     text-decoration: none;
     color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.aboutUsApp ul li a:hover{
+    color: #aa18af;
+}
+
+@media (max-width: 768px) {
+    .footerApp {
+        grid-template-columns: 1fr; 
+        text-align: center; 
+    }
+
+    .logoApp img {
+        margin: 0 auto;
+    }
+
+    .generalApp,
+    .aboutUsApp {
+        align-items: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .footerApp {
+        padding: 15px 20px;
+    }
+
+    .logoApp h2 {
+        font-size: 1.5rem;
+    }
+
+    .generalApp svg {
+        font-size: 20px; 
+    }
+
+    .aboutUsApp ul li a {
+        font-size: 0.9rem; 
+    }
 }
