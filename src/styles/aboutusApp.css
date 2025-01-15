@@ -1,74 +1,66 @@
-.sectionApp{
+.sectionApp {
     display: grid;
     grid-template-columns: 1fr;
-    gap:20px;
+    gap: 20px;
     padding: 20px;
     text-align: center;
 }
 
-.aboutUs{
-    background: linear-gradient(90deg, #f1f6f6, #e4fcfc);
-    padding: 5%;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.aboutUs h3 {
-    font-size: 1.8rem;
-    color: #2c2c2c;
-    margin-bottom: 10px;
-}
-
-.aboutUs p {
-    font-size: 1rem;
-    color: #000000;
-    line-height: 1.6;
-}
-
-.sectionApp .aboutUs h3{
-    font-size: 1.8rem;
-    color: #000000;
-    line-height: 1.6;
-}
-
+/* Ajuste general del contenedor */
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr; /* Por defecto, 2 columnas */
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.container .mission, .container .vission{
+/* Diseño de las tarjetas */
+.container .mission, .container .vission {
     background: linear-gradient(90deg, #f1f6f6, #e4fcfc);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mission h3, .vission h3{
+.container .mission:hover, .container .vission:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.mission h3, .vission h3 {
     font-size: 1.6rem;
-    color:#000000;
+    color: #000000;
     margin-bottom: 10px;
 }
 
-.mission p, .vission p{
+.mission p, .vission p {
     font-size: 1rem;
-    color:#000000;
+    color: #000000;
     line-height: 1.6;
 }
 
-/* Ajustes para pantallas grandes */
+/* Diseño responsivo */
+
+/* Para pantallas medianas (tabletas y similares) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Una columna en dispositivos más pequeños */
+        gap: 20px;
+    }
+}
+
+/* Para pantallas grandes */
 @media (min-width: 1024px) {
     .sectionApp {
         grid-template-columns: 1fr;
     }
 
     .container {
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: repeat(2, 1fr); /* Mantener 2 columnas en pantallas grandes */
         gap: 20px;
         max-width: 1200px;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 }
