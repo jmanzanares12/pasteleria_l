@@ -15,6 +15,38 @@
     margin: 0 auto;
 }
 
+.aboutUs {
+    max-width: 1160px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #f1f6f6, #e4fcfc);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutUs:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.aboutUs h3 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 10px;    
+}
+
+.aboutUs p {
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 1.6;   
+    margin-bottom: 20px;   
+    text-align: justify;    
+    text-justify: inter-word;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
 /* Diseño de las tarjetas */
 .container .mission, .container .vission {
     background: linear-gradient(90deg, #f1f6f6, #e4fcfc);
@@ -36,9 +68,14 @@
 }
 
 .mission p, .vission p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #000000;
-    line-height: 1.6;
+    line-height: 1.6;   
+    margin-bottom: 20px;   
+    text-align: justify;    
+    text-justify: inter-word;
+    word-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 /* Diseño responsivo */
