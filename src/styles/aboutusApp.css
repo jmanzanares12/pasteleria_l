@@ -7,7 +7,7 @@
 }
 
 .aboutUs{
-    background: linear-gradient(90deg, #a5eff5, #e5fdfd);
+    background: linear-gradient(90deg, #f1f6f6, #e4fcfc);
     padding: 5%;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -41,7 +41,7 @@
 }
 
 .container .mission, .container .vission{
-    background: linear-gradient(90deg, #e5fdfd, #a5eff5);
+    background: linear-gradient(90deg, #f1f6f6, #e4fcfc);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
