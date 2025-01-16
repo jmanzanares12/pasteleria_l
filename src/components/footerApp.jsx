@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/footerApp.css';
 import { Phone, Email, LocationOn, WhatsApp, Facebook } from '@mui/icons-material';
-import logo from '../images/logo.svg'
+import logo from '../assets/images/logo.svg';   
 
 function FooterApp() {
     return (

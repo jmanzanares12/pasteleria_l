@@ -1,28 +1,52 @@
 import React from "react";
+import CourselAboutApp from "./courselAboutApp";
 import '../styles/aboutusApp.css'
 
 function AboutUsApp() {
     return (
         <>
-            <section className="sectionApp">
-                <div className="aboutUs">
-                    <h3>Sobre Nosotros</h3>
-                    <p><strong>Panaderia Lilliam</strong> es más que una panadería; somos parte de la comunidad de <strong>Masaya</strong> desde hace más de 30 años. Hemos crecido junto a nuestros clientes, celebrando sus momentos especiales con nuestros panes, pasteles y postres. Nuestro compromiso es seguir ofreciendo productos frescos y deliciosos, elaborados con el mismo cariño que nos ha caracterizado durante estas tres décadas.
+        <section className="sectionApp">
+            <div className="imageApp">
+                <h3>Conócenos</h3>
+                <CourselAboutApp />
+            </div>
+
+            <div className="aboutUs">
+                <h3>Sobre Nosotros</h3>
+                <p>
+                    <strong>Panadería Lilliam</strong> es más que una panadería; somos parte de la comunidad de
+                    <strong> Masaya</strong> desde hace más de 30 años. Hemos crecido junto a nuestros clientes,
+                    celebrando sus momentos especiales con nuestros panes, pasteles y postres. Hoy, nuestro compromiso
+                    de ofrecer productos frescos y deliciosos nos ha llevado a expandirnos y estar más cerca de ustedes
+                    con sucursales también en Granada y Diriomo. Cada uno de nuestros locales mantiene el mismo cariño y
+                    dedicación que nos ha caracterizado durante estas tres décadas.
+                </p>
+            </div>
+
+            <div className="container">
+                <div className="mission">
+                    <h3>Misión</h3>
+                    <p>
+                        En Panadería Lilliam queremos ser ese lugar especial donde la comunidad se reúne y disfruta de
+                        momentos únicos. Ofrecemos productos horneados frescos, deliciosos y hechos con ingredientes de
+                        primera calidad, pero, sobre todo, con mucho cariño. Desde los días más simples hasta las
+                        celebraciones más grandes, estamos aquí para endulzar cada momento y fortalecer los lazos que
+                        nos unen como familia.
                     </p>
                 </div>
-                <div className="container">
-                    <div className="mission">
-                        <h3>Mision</h3>
-                        <p>Ser un punto de encuentro para la comunidad, ofreciendo productos horneados frescos y deliciosos, elaborados con ingredientes de primera calidad y el cariño que nos ha caracterizado durante más de 30 años. Buscamos endulzar los momentos cotidianos y las celebraciones especiales de nuestros clientes, fortaleciendo los lazos que nos unen a nuestra comunidad.</p>
-                    </div>
-                    <div className="vission">
-                        <h3>Vision</h3>
-                        <p>Ser una empresa líder en el sector de la panadería y pastelería a nivel Nacional, manteniendo nuestro compromiso con la calidad, la tradición y el servicio excepcional a la comunidad que nos vio nacer.</p>
-                    </div>
+                <div className="vission">
+                    <h3>Visión</h3>
+                    <p>
+                        Queremos ser líderes en panadería y pastelería en todo el país, llevando el sabor y la tradición
+                        que nos define a cada rincón de Nicaragua. Nuestro compromiso es mantenernos fieles a la calidad
+                        y al servicio excepcional que siempre hemos brindado, honrando a la comunidad que nos vio nacer
+                        y creciendo juntos hacia un futuro lleno de momentos deliciosos.
+                    </p>
                 </div>
-            </section>
-        </>
-    )
+            </div>
+        </section>
+    </>
+    );
 }
 
 export default AboutUsApp
