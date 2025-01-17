@@ -28,27 +28,34 @@ const SliderApp = () => {
                         className="sliderTrack"
                         style={{
                             transform: `translateX(-${currentIndex * 100}%)`,
-                            transition: "transform 0.5s ease-in-out",
+                            transition: "transform 0.3s ease-in-out",
                         }}
                     >
                         {data.map((item) => (
                             <li key={item.id} className="sliderItem">
-                                <img src={item.imgURL} width={600} height={300} alt={`Slide ${item.id}`} />
+                                <img
+                                    src={item.imgURL}
+                                    width={750}
+                                    height={400}
+                                    alt={`Slide ${item.id}`}
+                                />
                             </li>
                         ))}
                     </ul>
                 </div>
+
                 <div className="docsContainer">
-                    {data.map((_, idx) => (
+                    {data.map((item) => (
                         <div
-                            key={idx}
-                            className={`docsContainerItem ${idx === currentIndex ? "active" : ""}`}
-                            onClick={() => goToSlide(idx)}
+                            key={item.id}
+                            className={`docsContainerItem ${item.id === currentIndex ? "active" : ""}`}
+                            onClick={() => goToSlide(item.id)}
                         >
                             &#9865;
                         </div>
                     ))}
                 </div>
+
                 <div className="rightArrow" onClick={() => scrollToImage("next")}>&#10093;</div>
             </div>
         </div>

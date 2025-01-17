@@ -6,13 +6,19 @@
     text-align: center;
 }
 
-/* Ajuste general del contenedor */
+
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Por defecto, 2 columnas */
+    grid-template-columns: 1fr 1fr; 
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+h3{
+    font-size: 1.6rem;
+    color: #000000;
+    margin-bottom: 10px;
 }
 
 .aboutUs {
@@ -26,7 +32,7 @@
 }
 
 .aboutUs:hover {
-    transform: translateY(-10px); /* Efecto de elevación al pasar el cursor */
+    transform: translateY(-10px); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
 }
 
@@ -57,7 +63,7 @@
 }
 
 .container .mission:hover, .container .vission:hover {
-    transform: translateY(-10px); /* Efecto de elevación al pasar el cursor */
+    transform: translateY(-10px); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
 }
 
@@ -78,12 +84,11 @@
     letter-spacing: 1px;
 }
 
-/* Diseño responsivo */
 
 /* Para pantallas medianas (tabletas y similares) */
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr; /* Una columna en dispositivos más pequeños */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
 }
@@ -95,7 +100,7 @@
     }
 
     .container {
-        grid-template-columns: repeat(2, 1fr); /* Mantener 2 columnas en pantallas grandes */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 20px;
         max-width: 1200px;
         margin: 0 auto;
