@@ -1,0 +1,103 @@
+.mainContainer {
+    width: 100%;
+    max-width: 800px;                  
+    height: 500px; 
+    margin: 20px auto; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.sliderContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.leftArrow, .rightArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.leftArrow:hover, .rightArrow:hover {
+    color: #ff6347; 
+}
+
+.leftArrow {
+    left: 15px;
+}
+
+.rightArrow {
+    right: 15px;
+}
+
+.imagesContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center; 
+    overflow: hidden;
+    border-radius: 15px; 
+}
+
+ul.sliderTrack {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+}
+
+li.sliderItem {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.docsContainer {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.docsContainer .docsContainerItem {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.docsContainer .docsContainerItem.active {
+    background-color: #ff6347; 
+}
+
+.docsContainer .docsContainerItem:hover {
+    background-color: #ffa07a;
+}

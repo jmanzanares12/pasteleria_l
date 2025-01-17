@@ -1,6 +1,6 @@
 import React from "react";
-import CourselAboutApp from "./courselAboutApp";
-import '../styles/aboutusApp.css'
+import '../styles/aboutusApp.css';
+import SliderApp from "./sliderApp";
 
 function AboutUsApp() {
     return (
@@ -8,7 +8,7 @@ function AboutUsApp() {
         <section className="sectionApp">
             <div className="imageApp">
                 <h3>Conócenos</h3>
-                <CourselAboutApp />
+                <SliderApp />
             </div>
 
             <div className="aboutUs">
