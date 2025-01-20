@@ -22,14 +22,14 @@
     padding: 0;
 }
 
-.headerApp .content ul li a{
+.headerApp .content ul li link{
     text-decoration: none;
     color: #fff;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
-.headerApp .content ul li a:hover{
+.headerApp .content ul li link:hover{
     color: #f3c6f2;
 }
 
