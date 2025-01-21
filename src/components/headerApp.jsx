@@ -11,9 +11,9 @@ function HeaderApp() {
             </div>
             <div className="content">
                 <ul>
-                    <li><Link to="../components/aboutUsApp.jsx">Quienes somos</Link></li>
+                    <li><Link to="/">Inicio</Link></li>
+                    <li><Link to="/quienes-somos">Quienes somos</Link></li>
                     <li><Link to="/productos">Productos</Link></li>
-                    <li><Link to="/contactanos">Contáctanos</Link></li>
                 </ul>
             </div>
         </header>
@@ -21,3 +21,4 @@ function HeaderApp() {
 }
 
 export default HeaderApp;
+
