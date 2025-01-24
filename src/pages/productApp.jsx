@@ -5,7 +5,7 @@ const ProductApp = () => {
         <>
             <div className="mainContainer">
                 <div className="mainContent">
-                    <h1>Product App</h1>
+                    <h1>Hola soy un producto</h1>
                 </div>
             </div>
         </>
