@@ -11,8 +11,7 @@ function HeaderApp() {
             </div>
             <div className="content">
                 <ul>
-                    <li><Link to="/">Inicio</Link></li>
-                    <li><Link to="/quienes-somos">Quienes somos</Link></li>
+                    <li><Link to="/pasteleria_l">Inicio</Link></li>
                     <li><Link to="/productos">Productos</Link></li>
                 </ul>
             </div>

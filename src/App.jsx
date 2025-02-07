@@ -8,16 +8,27 @@ import ProductApp from './pages/productApp';
 function App() {
   return (
     <Router>
-      <HeaderApp />
       <Routes>
-        {/* Página de inicio y quienes somos (comparten estructura) */}
-        <Route path="/" element={<HomeApp />} />
-        <Route path="/quienes-somos" element={<HomeApp />} />
+        <Route
+          path='/pasteleria_l'
+          element={
+            <>
+              <HeaderApp />
+              <HomeApp />
+              <FooterApp />
+            </>
+          } />
 
-        {/* Página de productos con su propio contenido */}
-        <Route path="/productos" element={<ProductApp />} />
+        <Route
+          path='/productos'
+          element={
+            <>
+              <HeaderApp />
+              <ProductApp />
+              <FooterApp />
+            </>
+          } />
       </Routes>
-      <FooterApp />
     </Router>
   );
 }
