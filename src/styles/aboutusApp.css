@@ -1,88 +1,37 @@
 .sectionApp {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
     text-align: center;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+.imageApp {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 h3{
-    font-size: 1.6rem;
-    color: #000000;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .aboutUs {
-    max-width: 1160px;
-    margin: 0 auto;
-    background: linear-gradient(90deg, #f1f6f6, #e4fcfc);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-
-.aboutUs:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
-}
-
-.aboutUs h3 {
-    font-size: 2rem;
-    color: #000000;
-    margin-bottom: 10px;    
-}
-
-.aboutUs p {
-    font-size: 1.2rem;
-    color: #000000;
-    line-height: 1.6;   
-    margin-bottom: 20px;   
-    text-align: justify;    
-    text-justify: inter-word;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-}
-
-/* Diseño de las tarjetas */
-.container .mission, .container .vission {
-    background: linear-gradient(90deg, #f1f6f6, #e4fcfc);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.container .mission:hover, .container .vission:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
-}
-
-.mission h3, .vission h3 {
-    font-size: 1.6rem;
-    color: #000000;
-    margin-bottom: 10px;
-}
-
-.mission p, .vission p {
-    font-size: 1.2rem;
-    color: #000000;
-    line-height: 1.6;   
-    margin-bottom: 20px;   
-    text-align: justify;    
-    text-justify: inter-word;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-}
-
 
 /* Para pantallas medianas (tabletas y similares) */
 @media (max-width: 768px) {
