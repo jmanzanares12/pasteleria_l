@@ -5,7 +5,7 @@
     gap: 30px;
     padding: 40px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background: linear-gradient(135deg, #4480db, #4e7ac0);
 }
 
 .imageApp {
@@ -31,6 +31,48 @@ h3{
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.aboutUs p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container .mission, .container .vission {
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mission h3, .vission h3 {
+    font-size: 1.8rem;
+    color: #222;
+}
+
+.mission p, .vission p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
 }
 
 /* Para pantallas medianas (tabletas y similares) */
