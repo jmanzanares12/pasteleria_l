@@ -1,4 +1,5 @@
 import React from 'react';
+import '../components/productCard';
 
 const ProductApp = () => {
     return (
@@ -6,6 +7,7 @@ const ProductApp = () => {
             <div className="mainContainer">
                 <div className="mainContent">
                     <h1>Hola soy un producto</h1>
+                    <ProductCard />
                 </div>
             </div>
         </>
