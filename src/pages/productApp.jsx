@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCard from '../components/productCard';
+import ProductCatalog from '../components/productCatalog';
 
 const ProductApp = () => {
     return (
@@ -7,7 +7,7 @@ const ProductApp = () => {
             <div className="mainContainer">
                 <div className="mainContent">
                     <h1>Hola soy un producto</h1>
-                    <ProductCard />
+                    <ProductCatalog />
                 </div>
             </div>
         </>

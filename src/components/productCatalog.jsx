@@ -41,14 +41,39 @@ const ProductCatalog = () => {
     // Filter products
 
     const filteredProducts = product.filter((p) => p.name.toLowerCase().includes(search.toLowerCase())).sort((a, b) => {
-        
+        if (sort === 'name') return b.price - a.price;
+        if (sort === 'price') return a.price - b.price;
+        return b.name.localeCompare(a.name);
     });
 
     return (
         <>
             <div className="productCatalog">
-                
+                <div className="filter">
+                    <input
+                        type= 'text'
+                        placeholder='Buscar producto...'
+                        className='search'
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
+                    <select className='sort-by' value={sort} onChange={(e) => setSort(e.target.value)}>
+                        <option value="name">Relevancia</option>
+                        <option value="price-desc" >Precio: Mayor a menor</option>
+                        <option value="pirce-asc">Precio: Menor a mayor</option>
+                    </select>
+                </div>
+
+                <div className="products">
+                {filteredProducts.length > 0 ? (
+                    filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)
+                ) : (
+                    <p>No hay productos disponibles.</p>
+                )}
+                </div>
             </div>
         </>
     )
 }
+
+export default ProductCatalog;
