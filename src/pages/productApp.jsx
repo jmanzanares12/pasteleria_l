@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductCatalog from '../components/productCatalog';
+import '../styles/productApp.css';
 
 const ProductApp = () => {
     return (

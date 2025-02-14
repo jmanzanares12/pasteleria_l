@@ -1,0 +1,38 @@
+    .mainContainer {
+        max-width: 1200px;
+        margin: auto;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .mainContent {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .mainContent h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .mainContent .productCatalog {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .mainContainer {
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            align-items: flex-start;
+        }
+
+        .mainContent {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
