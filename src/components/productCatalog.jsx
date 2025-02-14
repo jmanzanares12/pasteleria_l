@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProductCard from './productCard';
+import '../styles/productCatalog.css';
 
 const ProductCatalog = () => {
     const [search, setSearch] = useState('');
