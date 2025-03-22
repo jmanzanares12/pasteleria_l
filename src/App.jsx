@@ -1,9 +1,12 @@
 import React from 'react';
+import Footer from './constants/footer';
+import Header from './constants/header';
 
 function App() {
   return (
-    <div className='bg-slate-100 p-20'>
-      <h1>Hello Vite!</h1>
+    <div>
+      <Header />
+      <Footer />
     </div>
   )
 }
