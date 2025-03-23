@@ -11,7 +11,7 @@ const Footer = () => {
                     {/* Logo y redes sociales */}
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
-                            <Link to='/pasteleria_l' className='flex items-center space-x-2'>
+                            <Link to='/' className='flex items-center space-x-2'>
                                 <img src={logo} alt="logo" className="w-20 h-20" />
                                 <span className="text-xl font-semibold">Pastelería Lilliam</span>
                             </Link>
@@ -41,7 +41,7 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold">Enlaces de interés</h3>
                         <nav>
                             <ul className="space-y-4">
-                                <li><Link to="/pasteleria_l" className="hover:text-indigo-500 transition-colors">Home</Link></li>
+                                <li><Link to="/" className="hover:text-indigo-500 transition-colors">Home</Link></li>
                                 <li><Link to="/about" className="hover:text-indigo-500 transition-colors">About</Link></li>
                                 <li><Link to="/products" className="hover:text-indigo-500 transition-colors">Products</Link></li>
                                 <li><Link to="/contact" className="hover:text-indigo-500 transition-colors">Contact</Link></li>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Footer from './components/footer';
 import Header from './components/header';
 import { routes } from './routes/routes.jsx';
@@ -12,8 +12,13 @@ const App = () => {
       <main className='flex-1 bg-gray-100 p-8'>
         <Routes>
           {routes.map((route) => (
-            <Route key={route.path} path={route.path} element={route.element} />
+            <Route
+              key={route.path}
+              path={route.path}
+              element={route.element}
+            />
           ))}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
       <Footer />

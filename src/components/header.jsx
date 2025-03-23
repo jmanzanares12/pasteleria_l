@@ -5,8 +5,9 @@ import { FiMenu, FiX } from 'react-icons/fi';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+
     const navItems = [
-        { name: 'Home', path: '/pasteleria_l' },
+        { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Products', path: '/products' },
         { name: 'Contact', path: '/contact' }
@@ -18,7 +19,7 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <div className="flex items-center space-x-2">
-                        <Link to='/pasteleria_l' className='flex items-center space-x-2'>
+                        <Link to='/' className='flex items-center space-x-2'>
                             <img src={logo} alt="logo" className="w-20 h-20" />
                             <span className="text-xl font-bold text-gray-800">Pasteleria Lilliam</span>
                         </Link>
