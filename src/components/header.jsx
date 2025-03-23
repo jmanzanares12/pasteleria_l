@@ -1,11 +1,12 @@
 import logo from '../images/logo.png';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navItems = [
-        { name: 'Home', path: '/' },
+        { name: 'Home', path: '/pasteleria_l' },
         { name: 'About', path: '/about' },
         { name: 'Products', path: '/products' },
         { name: 'Contact', path: '/contact' }
@@ -17,8 +18,10 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <div className="flex items-center space-x-2">
-                        <img src={logo} alt="logo" className="w-20 h-20" />
-                        <span className="text-xl font-bold text-gray-800">Pasteleria Lilliam</span>
+                        <Link to='/pasteleria_l' className='flex items-center space-x-2'>
+                            <img src={logo} alt="logo" className="w-20 h-20" />
+                            <span className="text-xl font-bold text-gray-800">Pasteleria Lilliam</span>
+                        </Link>
                     </div>
 
                     {/* Navbar */}
@@ -26,12 +29,12 @@ const Header = () => {
                         <ul className="flex space-x-10">
                             {navItems.map((item) => (
                                 <li key={item.name}>
-                                    <a
-                                        href={item.path}
+                                    <Link
+                                        to={item.path}
                                         className="text-gray-800 hover:text-indigo-600 font-bold transition-all duration-300"
                                     >
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -53,13 +56,13 @@ const Header = () => {
                         <ul className="flex flex-col items-center space-y-4">
                             {navItems.map((item) => (
                                 <li key={item.name}>
-                                    <a
-                                        href={item.path}
+                                    <Link
+                                        to={item.path}
                                         className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

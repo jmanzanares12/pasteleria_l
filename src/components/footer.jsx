@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../images/logo.png';
 import { FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -10,11 +11,13 @@ const Footer = () => {
                     {/* Logo y redes sociales */}
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
-                            <img src={logo} alt="logo" className="w-20 h-20" />
-                            <span className="text-xl font-semibold">Pastelería Lilliam</span>
+                            <Link to='/pasteleria_l' className='flex items-center space-x-2'>
+                                <img src={logo} alt="logo" className="w-20 h-20" />
+                                <span className="text-xl font-semibold">Pastelería Lilliam</span>
+                            </Link>
                         </div>
                         <div className="flex space-x-4">
-                            <a 
+                            <a
                                 href="https://www.facebook.com/profile.php?id=100070706032861&locale=es_LA"
                                 target="_blank"
                                 aria-label="Facebook"
@@ -22,14 +25,14 @@ const Footer = () => {
                             >
                                 <FaFacebook className="h-6 w-6" />
                             </a>
-                            <a 
+                            <a
                                 href={`https://wa.me/50588174854?text=${encodeURIComponent('Hola, me gustaría saber cómo puedo hacer un encargo de pastel con ustedes')}`}
                                 target="_blank"
                                 aria-label="Contactar por Whatsapp"
                                 className="text-gray-400 hover:text-green-500 transition-colors duration-300"
                             >
                                 <FaWhatsapp className="h-6 w-6" />
-                            </a>    
+                            </a>
                         </div>
                     </div>
 
@@ -38,10 +41,10 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold">Enlaces de interés</h3>
                         <nav>
                             <ul className="space-y-4">
-                                <li><a href="/" className="hover:text-indigo-500 transition-colors">Home</a></li>
-                                <li><a href="/about" className="hover:text-indigo-500 transition-colors">About</a></li>
-                                <li><a href="/products" className="hover:text-indigo-500 transition-colors">Products</a></li>
-                                <li><a href="/contact" className="hover:text-indigo-500 transition-colors">Contact</a></li>
+                                <li><Link to="/pasteleria_l" className="hover:text-indigo-500 transition-colors">Home</Link></li>
+                                <li><Link to="/about" className="hover:text-indigo-500 transition-colors">About</Link></li>
+                                <li><Link to="/products" className="hover:text-indigo-500 transition-colors">Products</Link></li>
+                                <li><Link to="/contact" className="hover:text-indigo-500 transition-colors">Contact</Link></li>
                             </ul>
                         </nav>
                     </div>
