@@ -7,10 +7,10 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
-        { name: 'Home', path: '/' },
-        { name: 'About', path: '/about' },
-        { name: 'Products', path: '/products' },
-        { name: 'Contact', path: '/contact' }
+        { name: 'Inicio', path: '/' },
+        { name: 'Sobre Nosotros', path: '/about' },
+        { name: 'Productos', path: '/products' },
+        { name: 'Contacto', path: '/contact' }
     ];
 
     return (
