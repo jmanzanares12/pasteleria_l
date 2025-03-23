@@ -1,13 +1,16 @@
 import React, { useRef, useEffect} from 'react';
 import Slider from 'react-slick';
 import { sliderImages } from '../data/data.js';
-import { FiAward, FiEye, FiHeart, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FiAward, FiEye, FiHeart } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 
 const Home = () => {
     const sliderRef = useRef(null);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -22,7 +25,7 @@ const Home = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 1
     };
 
     return (
@@ -106,6 +109,7 @@ const Home = () => {
                 <button className='bg-indigo-600 text-white px-8 py-3 rounded-lg 
                     hover:bg-indigo-700 hover:scale-105 transition-all duration-300 
                     text-lg font-semibold shadow-lg'
+                    onClick={() => navigate('/products')}
                 >
                     Ver Productos
                 </button>
