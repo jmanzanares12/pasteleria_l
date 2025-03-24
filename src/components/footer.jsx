@@ -41,10 +41,10 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold">Enlaces de interés</h3>
                         <nav>
                             <ul className="space-y-4">
-                                <li><Link to="/" className="hover:text-indigo-500 transition-colors">Home</Link></li>
-                                <li><Link to="/about" className="hover:text-indigo-500 transition-colors">About</Link></li>
-                                <li><Link to="/products" className="hover:text-indigo-500 transition-colors">Products</Link></li>
-                                <li><Link to="/contact" className="hover:text-indigo-500 transition-colors">Contact</Link></li>
+                                <li><Link to="/" className="hover:text-indigo-500 transition-colors">Inicio</Link></li>
+                                <li><Link to="/about" className="hover:text-indigo-500 transition-colors">Sobre Nosotros</Link></li>
+                                <li><Link to="/products" className="hover:text-indigo-500 transition-colors">Productos</Link></li>
+                                <li><Link to="/contact" className="hover:text-indigo-500 transition-colors">Contacto</Link></li>
                             </ul>
                         </nav>
                     </div>

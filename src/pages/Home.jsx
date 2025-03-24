@@ -29,7 +29,7 @@ const Home = () => {
     };
 
     return (
-        <div className='max-w-8xl mx-auto px-4 sm:px6 lg:px-8'>
+        <div className='max-w-7xl mx-auto px-4 sm:px6 lg:px-8 py-12'>
 
             {/* Slider */}
             <section className='py-12 md:py-16 lg:py20'>
@@ -108,7 +108,7 @@ const Home = () => {
             </section>
 
             {/* CTA  */}
-            <section className='py-12 text-center bg-gradient-to-r from-rose-50 to-amber-50 rounded-2xl shadow-inner'>
+            <section className='py-10 text-center bg-gray-100 rounded-2xl shadow-inner'>
                 <div className='max-w-2xl mx-auto px-4 sm:px-6 lg:px-8'>
                     <h2 className='text-3xl md:text-4xl font-bold text-gray-800 mb-8 font-[Playfair_Display]'>¿Quieres conocer más sobre nosotros?</h2>
                 </div>
