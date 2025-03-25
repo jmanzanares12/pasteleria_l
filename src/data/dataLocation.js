@@ -1,6 +1,6 @@
-import nightMasaya from '../images/nightMasaya.jpeg';
-import homeGranada from '../images/homeGranada.jpg';
-import homeDiriomo from '../images/homeDiriomo.jpg';
+import nightMasaya from '../assets/images/nightMasaya.jpeg';
+import homeGranada from '../assets/images/homeGranada.jpg';
+import homeDiriomo from '../assets/images/homeDiriomo.jpg';
 
 export const locations = [
     {

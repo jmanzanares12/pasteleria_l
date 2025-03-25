@@ -1,6 +1,6 @@
-import homeImage from '../images/homeImage.jpg';
-import homeMasaya from '../images/homeMasaya.jpg';
-import nightMasaya from '../images/nightMasaya.jpeg';
+import homeImage from '../assets/images/homeImage.jpg';
+import homeMasaya from '../assets/images/homeMasaya.jpg';
+import nightMasaya from '../assets/images/nightMasaya.jpeg';
 
 export const sliderImages = [
     {
