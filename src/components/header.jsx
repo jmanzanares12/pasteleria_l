@@ -1,5 +1,5 @@
-import logo from '../images/logo.png';
 import React, { useState } from 'react';
+import logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 
@@ -21,7 +21,7 @@ const Header = () => {
                     <div className="flex items-center space-x-2">
                         <Link to='/' className='flex items-center space-x-2'>
                             <img src={logo} alt="logo" className="w-20 h-20" />
-                            <span className="text-xl font-bold text-gray-800">Pasteleria Lilliam</span>
+                            <span className="text-xl font-bold text-red-800">Pasteleria Lilliam</span>
                         </Link>
                     </div>
 
@@ -32,7 +32,7 @@ const Header = () => {
                                 <li key={item.name}>
                                     <Link
                                         to={item.path}
-                                        className="text-gray-800 hover:text-indigo-600 font-bold transition-all duration-300"
+                                        className="text-rose-800 hover:text-indigo-600 font-bold transition-all duration-300"
                                     >
                                         {item.name}
                                     </Link>
