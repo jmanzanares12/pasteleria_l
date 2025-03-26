@@ -13,7 +13,7 @@ const About = () => {
                 <h1 className='text-4xl md:text-5xl font-bold text-rose-800 mb-6 font-[Playfair_Display]'>Un poco de Pastelería Lilliam</h1>
                 <p className='max-w-3xl mx-auto text-2xl text-gray-800 nb-9 leaading-relaxed'>
                     Bienvenidos a Pastelería Lilliam, donde cada postre es una historia y cada historia 
-                    tiene un toque dulce e inolvidable. <br /><br />
+                    tiene un toque dulce inolvidable. <br /><br />
                     Desde 1993, en Pastelería Lilliam hemos convertido ingredientes simples en momentos extraordinarios. 
                     Nuestra historia es el reflejo de tres generaciones de reposteros apasionados, dedicados a perfeccionar 
                     el arte de la pastelería con amor, tradición e innovación. Cada creación que sale de nuestro horno no solo es un postre, sino el resultado de años de experiencia, 
