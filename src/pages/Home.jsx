@@ -48,7 +48,7 @@ const Home = () => {
     ];
 
     return (
-        <div className='max-w-7xl mx-auto px-4 sm:px6 lg:px-8 py-12'>
+        <div className='max-w-8xl mx-auto px-4 sm:px6 lg:px-8 py-12'>
             {/* Slider */}
             <section className='py-12 md:py-16 lg:py20'>
                 <div className='grid md:grid-cols-2 gap-12 lg:gap-16 items-center'>

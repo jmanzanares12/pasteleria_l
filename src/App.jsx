@@ -1,29 +1,19 @@
-import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import Footer from './components/footer';
-import Header from './components/header';
-import { routes } from './routes/routes.jsx';
-
+import React from "react";
+import Providers from "./Providers";
+import AppRoutes from "./routes";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 const App = () => {
-  return (
-    <div className='flex flex-col min-h-screen'>
+  return(
+    <Providers>
       <Header />
-      <main className='flex-1 bg-white p-20'>
-        <Routes>
-          {routes.map((route) => (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={route.element}
-            />
-          ))}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+      <main className="max-w-screen-lg w-full px-4 mx-auto py-8 flex-1 bg-white">
+        <AppRoutes />
       </main>
       <Footer />
-    </div>
+    </Providers>
   )
 }
 
-export default App;
+export default App
