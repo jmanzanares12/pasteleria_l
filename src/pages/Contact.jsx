@@ -204,7 +204,7 @@ const Contact = () => {
                 </p>
                 <p className="mt-2 flex items-center justify-center gap-2">
                     <FiMail className="text-rose-600" />
-                    pasteleria.lilliam.nicaragua@gmail.com
+                    pastelerialilliam@gmail.com
                 </p>
             </div>
         </div>

@@ -2,10 +2,10 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Loading from '../components/Loading';
 
-const Home = React.lazy(() => import('../pages/Home'));
-const About = React.lazy(() => import('../pages/About'));
-const Products = React.lazy(() => import('../pages/Products'));
-const Contact = React.lazy(() => import('../pages/Contact'));
+const HomeView = React.lazy(() => import('../views/HomeView'));
+const AboutView = React.lazy(() => import('../views/AboutView'));
+const ProductsView = React.lazy(() => import('../views/ProductsView'));
+const ContactView = React.lazy(() => import('../views/ContactView'));
 
 const AppRoutes = () => {
     return (
@@ -14,15 +14,15 @@ const AppRoutes = () => {
                 path="/"
                 element={
                     <React.Suspense fallback={<Loading />}>
-                        <Home />
+                        <HomeView />
                     </React.Suspense>
                 }
             />
-            <Route
+            <Route 
                 path="/about"
                 element={
                     <React.Suspense fallback={<Loading />}>
-                        <About />
+                        <AboutView />
                     </React.Suspense>
                 }
             />
@@ -30,7 +30,7 @@ const AppRoutes = () => {
                 path="/products"
                 element={
                     <React.Suspense fallback={<Loading />}>
-                        <Products />
+                        <ProductsView />
                     </React.Suspense>
                 }
             />
@@ -38,7 +38,7 @@ const AppRoutes = () => {
                 path="/contact"
                 element={
                     <React.Suspense fallback={<Loading />}>
-                        <Contact />
+                        <ContactView />
                     </React.Suspense>
                 }
             />
