@@ -1,0 +1,1 @@
+import{j as s}from"./index-1ltpBd_h.js";const t=()=>s.jsx("div",{className:"container mx-auto px-4 py-8",children:s.jsx("h1",{className:"text-4xl font-bold mb-4",children:"Productos"})}),r=()=>s.jsx(t,{});export{r as default};
