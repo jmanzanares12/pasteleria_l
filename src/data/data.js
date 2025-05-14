@@ -1,24 +1,17 @@
-import homeImage from '../assets/images/homeImage.jpg';
-import homeMasaya from '../assets/images/homeMasaya.jpg';
-import nightMasaya from '../assets/images/nightMasaya.jpeg';
+import homeImage from '../assets/images/home.jpeg';
+import homeImage2 from '../assets/images/home-two.jpeg';
 
 export const sliderImages = [
     {
         id: 1,
         image: homeImage,
         alt: 'homeImage',
-        caption: 'Pastelería Lilliam'
+        caption: 'Pastelería Lilliam, Originarios de Masaya!'
     },
     {
         id: 2,
-        image: homeMasaya,
+        image: homeImage2,
         alt: 'homeMasaya',
-        caption: 'Originarios de Masaya'
-    },
-    {
-        id: 3,
-        image: nightMasaya,
-        alt: 'nightMasaya',
-        caption: 'Dejanos darte un pedacito de nuestra cultura y tradición' 
+        caption: 'Degusta un pedacito de tradicion en nuestra Pasteleria!'
     }
 ];
