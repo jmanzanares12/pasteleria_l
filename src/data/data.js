@@ -6,7 +6,7 @@ export const sliderImages = [
         id: 1,
         image: homeImage,
         alt: 'homeImage',
-        caption: 'Pastelería Lilliam, Originarios de Masaya!'
+        caption: '“Pastelería Lilliam – Sabor que nace en Masaya, tradición que enamora.”'
     },
     {
         id: 2,
