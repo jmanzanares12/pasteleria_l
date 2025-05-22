@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/pasteleria_l/',
+  base: '/',
   plugins: [
     react(),
     tailwindcss()
