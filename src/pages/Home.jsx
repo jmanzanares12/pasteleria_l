@@ -14,8 +14,8 @@ const Home = () => {
                 <CTASection
                     title='¿Te apatece un poco de dulce?'
                     description='Visita nuestra tienda o explora nuestro catálogo en línea para descubrir nuestras creaciones más deliciosas.'
-                    buttonText='Ver Sobre Nosotros'
-                    redirectTo='/about'
+                    buttonText='Ver Catalogo'
+                    redirectTo='/products'
                 />
             </div>
         </>
