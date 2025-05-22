@@ -11,7 +11,7 @@ const Footer = () => {
                     {/* Logo y redes sociales */}
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
-                            <Link to='/' className='flex items-center space-x-2'>
+                            <Link to='/' className='flex flex-col items-center space-x-2'>
                                 <img src={logo} alt="logo" className="w-20 h-20" />
                                 <span className="text-xl font-semibold">Pastelería Lilliam</span>
                             </Link>
@@ -42,7 +42,6 @@ const Footer = () => {
                         <nav>
                             <ul className="space-y-4">
                                 <li><Link to="/" className="hover:text-indigo-500 transition-colors">Inicio</Link></li>
-                                <li><Link to="/about" className="hover:text-indigo-500 transition-colors">Sobre Nosotros</Link></li>
                                 <li><Link to="/products" className="hover:text-indigo-500 transition-colors">Productos</Link></li>
                                 <li><Link to="/contact" className="hover:text-indigo-500 transition-colors">Contacto</Link></li>
                             </ul>
@@ -53,7 +52,7 @@ const Footer = () => {
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold">Contacto</h3>
                         <ul className="space-y-4">
-                            <li>pasteleria.lilliam.nicaragua@gmail.com</li>
+                            <li>pastelerialilliam@gmail.com</li>
                             <li>+505 8817 4854</li>
                             <li>Masaya, Nicaragua</li>
                         </ul>

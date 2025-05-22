@@ -12,16 +12,10 @@ const Home = () => {
                 <Values />
                 <LocationsCards />
                 <CTASection
-                    title='¿Quieres conocer más sobre nosotros?'
+                    title='¿Te apatece un poco de dulce?'
                     description='Visita nuestra tienda o explora nuestro catálogo en línea para descubrir nuestras creaciones más deliciosas.'
                     buttonText='Ver Sobre Nosotros'
                     redirectTo='/about'
-                />
-                <CTASection
-                    title='¿Quieres conocer más sobre nuestra tradición?'
-                    description='Visita nuestra tienda o explora nuestro catálogo en línea para descubrir nuestras creaciones más deliciosas.'
-                    buttonText='Contactanos'
-                    redirectTo='/contact'
                 />
             </div>
         </>

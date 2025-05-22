@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+:root{
+    --bg-color: #F5F5F5;
+    --text-color: #333333;
+}
+
+.dark{
+    --bg-color: #333333;
+    --text-color: #F5F5F5;
+}

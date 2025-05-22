@@ -5,7 +5,7 @@ const CTASection = ({ title, description, buttonText, redirectTo }) => {
     const navigate = useNavigate();
 
     return (
-        <section className='bg-white border border-gray-200 rounded-2xl py-20 px-6 sm:px-10 space-y-10'>
+        <section className='max-w-7xl mx-auto bg-white text-center border border-gray-200 rounded-2xl py-20 px-6 sm:px-10 space-y-10'>
             <div className='max-w-2xl mx-auto px-6'>
                 <h2 className='text-4xl font-bold mb-6'>
                     🎂 <span className='text-rose-500'>{title}</span>
