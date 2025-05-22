@@ -1,5 +1,5 @@
 import React from "react";
-import Providers from "./providers";
+import Providers from "./Providers";
 import AppRoutes from "./routes";
 import Header from "./components/header";
 import Footer from "./components/footer";
