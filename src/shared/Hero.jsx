@@ -22,9 +22,9 @@ const Hero = () => {
     };
 
     return (
-        <div className='min-h-screen mx-auto px-4 sm:px6 lg:px-8 py-12'>
+        <div className='w-full'>
             {/* Slider */}
-            <section className='relative w-full h-[80vh] md:h-[90vh] overflow-hidden'>
+            <section className='relative w-full h-screen overflow-hidden'>
                 <Slider 
                     ref={sliderRef} 
                     {...sliderSettings}
@@ -32,7 +32,7 @@ const Hero = () => {
                     focusOnSelect={false}
                 >
                     {sliderImages.map((images) => (
-                        <div key={images.id} className='relative w-full h-[80vh] md:h-[90vh]'>
+                        <div key={images.id} className='relative w-full h-screen'>
                             <img
                                 src={images.image}
                                 alt={images.alt}
@@ -45,15 +45,15 @@ const Hero = () => {
                                     initial={{ opacity: 0, y: -40 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className='text-4xl md:text-5xl mb-4 text-center'
+                                    className='text-4xl md:text-5xl mb-4 text-left'
                                 >
-                                    Bienvenidos a <br /> Pastelería Lilliam
+                                    Bienvenidos a Pastelería Lilliam
                                 </motion.h1>
                                 <motion.p
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 1, delay: 0.3 }}
-                                    className='text-2xl md:text-2xl max-w-3xl leading-relaxed drop-shadow-md border-l-4 pl-4 border-rose-400'
+                                    className='text-lg md:text-2xl max-w-3xl leading-relaxed drop-shadow-md'
                                 >
                                     Con más de 30 años de experiencia endulzando los momentos más especiales, en Pastelería Lilliam
                                     convertimos cada creación en una obra de arte. Nuestra tradición familiar, combinada con técnicas
@@ -61,7 +61,7 @@ const Hero = () => {
                                     calidad y un toque de amor en cada receta.
                                 </motion.p>
                             </div>
-                            <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 bg-black/50 px-6 py-3 rounded-xl text-white text-center shadow-lg max-w-[90%]'>
+                            <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30  px-6 py-3 rounded-xl text-white text-center max-w-[90%]'>
                                 <p className='text-lg md:text-xl font-medium'>
                                     {images.caption}
                                 </p>

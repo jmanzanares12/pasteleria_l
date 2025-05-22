@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
@@ -8,7 +8,6 @@ const Header = () => {
 
     const navItems = [
         { name: 'Inicio', path: '/' },
-        { name: 'Sobre Nosotros', path: '/about' },
         { name: 'Productos', path: '/products' },
         { name: 'Contacto', path: '/contact' }
     ];

@@ -5,10 +5,10 @@ const CTASection = ({ title, description, buttonText, redirectTo }) => {
     const navigate = useNavigate();
 
     return (
-        <section className='py-14 text-center bg-gradient-to-r from-rose-50 to-rose-100 rounded-2xl shadow-inner'>
+        <section className='bg-white border border-gray-200 rounded-2xl py-20 px-6 sm:px-10 space-y-10'>
             <div className='max-w-2xl mx-auto px-6'>
-                <h2 className='text-4xl font-bold text-gray-800 mb-6 font-[Playfair_Display]'>
-                    🎂 <span className='text-rose-600'>{title}</span>
+                <h2 className='text-4xl font-bold mb-6'>
+                    🎂 <span className='text-rose-500'>{title}</span>
                 </h2>
                 <p className='text-xl text-gray-700 mb-8'>{description}</p>
                 <button

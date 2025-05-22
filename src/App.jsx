@@ -8,7 +8,7 @@ const App = () => {
   return(
     <Providers>
       <Header />
-      <main className="min-h-screen mx-auto px-4 sm:px6 lg:px-8 py-12">
+      <main className="min-h-screen">
         <AppRoutes />
       </main>
       <Footer />

@@ -1,40 +1,32 @@
-// src/components/shared/Values.jsx
-import { FiAward, FiEye, FiHeart } from 'react-icons/fi';
-
-const values = [
-    {
-        icon: <FiAward className='h-8 w-8 text-rose-600 mb-4' />,
-        title: 'Misión',
-        text: 'Crear experiencias memorables a través de la repostería artesanal...',
-    },
-    {
-        icon: <FiEye className='h-8 w-8 text-rose-600 mb-4' />,
-        title: 'Visión',
-        text: 'Ser reconocidos como la pastelería líder en innovación y calidad...',
-    },
-    {
-        icon: <FiHeart className='h-8 w-8 text-rose-600 mb-4' />,
-        title: 'Compromiso',
-        text: 'Utilizar siempre ingredientes de primera calidad...',
-    },
-];
+import { values } from '../data/dataValues.js';
 
 const Values = () => (
-    <section className='py-40 mb-16'>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8'>
-            {values.map((value, index) => (
+    <section className="py-20 px-6 sm:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {values.map((value, index) => {
+            const Icon = value.icon;
+            
+            return (
                 <div
                     key={index}
-                    className='bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-l-4 border-rose-300'
+                    className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-1"
                 >
-                    <div className='bg-rose-100 w-fit p-4 rounded-2xl mb-6'>{value.icon}</div>
-                    <h3 className='text-3xl font-bold text-gray-800 hover:text-rose-600 transition-colors duration-300 font-[Playfair_Display] mb-4'>
-                        {value.title}
-                    </h3>
-                    <p className='text-xl text-gray-600 leading-relaxed'>{value.text}</p>
+                    {/* Texto */}
+                    <div className="w-full md:w-2/3 text-center md:text-left mb-6 md:mb-0 md:mr-4">
+                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2 font-[Playfair_Display]">
+                            {value.title}
+                        </h3>
+                        <p className="text-gray-600 text-lg leading-relaxed">{value.text}</p>
+                    </div>
+
+                    {/* Ícono */}
+                    <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+                        <div className="bg-green-100 p-4 rounded-full">
+                            <Icon className="h-16 w-16 text-green-600" />
+                        </div>
+                    </div>
                 </div>
-            ))}
-        </div>
+            );
+        })}
     </section>
 );
 

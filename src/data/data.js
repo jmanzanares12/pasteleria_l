@@ -6,12 +6,12 @@ export const sliderImages = [
         id: 1,
         image: homeImage,
         alt: 'homeImage',
-        caption: '“Pastelería Lilliam – Sabor que nace en Masaya, tradición que enamora.”'
+        caption: '“Pastelería Lilliam: Sabor que nace en Masaya, tradición que enamora.”'
     },
     {
         id: 2,
         image: homeImage2,
         alt: 'homeMasaya',
-        caption: 'Degusta un pedacito de tradicion en nuestra Pasteleria!'
+        caption: '"Degusta un pedacito de tradicion en nuestra Pasteleria!"'
     }
 ];
