@@ -7,7 +7,7 @@ const App = () => {
   return(
     <>
       <Header />
-      <main className="min-h-screen">
+      <main className="min-h-screen pt-20">
         <AppRoutes />
       </main>
       <Footer />
