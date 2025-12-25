@@ -1,11 +1,66 @@
 @import "tailwindcss";
 
-:root{
-    --bg-color: #F5F5F5;
-    --text-color: #333333;
+@import "tailwindcss";
+
+:root {
+    /* Paleta inspirada en el Logo */
+    --color-primary: #65C6D1;
+    /* Cian del logo */
+    --color-primary-700: #4DAAB5;
+    /* Versión más oscura para estados hover */
+    --color-accent: #F2A9AD;
+    /* Rosa de las franjas */
+    --color-cream: #FDF4F5;
+    /* Fondo muy suave con tinte rosado */
+    --color-bg: #FFFFFF;
+    /* Blanco puro para limpieza */
+    --color-surface: #F9FDFE;
+    /* Superficie con tinte cian casi imperceptible */
+    --color-text: #2D3748;
+    /* Gris oscuro azulado para legibilidad */
+    --color-muted: #94A3B8;
+    /* Texto secundario */
+
+    --radius: 16px;
+    /* Esquinas más redondeadas = sensación más amigable/dulce */
 }
 
-.dark{
-    --bg-color: #333333;
-    --text-color: #F5F5F5;
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Outfit', sans-serif;
 }
+
+/* Ajuste específico para el logo en el header */
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Tarjetas con estilo "Pastel" */
+.card {
+    background: var(--color-surface);
+    border: 1px solid rgba(101, 198, 209, 0.1);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px rgba(101, 198, 209, 0.15);
+    transform: translateY(-4px);
+}
+
+/* Image helpers: control crop, focus and presentation */
+.img-cover { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.img-cover--focus-top { object-position: 50% 20%; }
+.img-cover--focus-center { object-position: center; }
+.img-contain { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; background: var(--color-surface); }
+.img-card { width: 100%; height: 400px; display: block; }
+.img-card--md { height: 360px; }
+.img-card--sm { height: 260px; }
+
+/* Optional utility: keep aspect ratio using padding-top */
+.aspect-4-3 { position: relative; width: 100%; padding-top: 75%; overflow: hidden; }
+.aspect-4-3 > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Loading from '../components/Loading';
 
 const HomeView = React.lazy(() => import('../views/HomeView'));
+const AboutUsView = React.lazy(() => import('../views/AboutUsView'));
 const ProductsView = React.lazy(() => import('../views/ProductsView'));
 const ContactView = React.lazy(() => import('../views/ContactView'));
 
@@ -14,6 +15,14 @@ const AppRoutes = () => {
                 element={
                     <React.Suspense fallback={<Loading />}>
                         <HomeView />
+                    </React.Suspense>
+                }
+            />
+            <Route
+                path="/aboutus"
+                element={
+                    <React.Suspense fallback={<Loading />}>
+                        <AboutUsView />
                     </React.Suspense>
                 }
             />
