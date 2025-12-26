@@ -51,16 +51,3 @@ body {
     box-shadow: 0 10px 30px rgba(101, 198, 209, 0.15);
     transform: translateY(-4px);
 }
-
-/* Image helpers: control crop, focus and presentation */
-.img-cover { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-.img-cover--focus-top { object-position: 50% 20%; }
-.img-cover--focus-center { object-position: center; }
-.img-contain { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; background: var(--color-surface); }
-.img-card { width: 100%; height: 400px; display: block; }
-.img-card--md { height: 360px; }
-.img-card--sm { height: 260px; }
-
-/* Optional utility: keep aspect ratio using padding-top */
-.aspect-4-3 { position: relative; width: 100%; padding-top: 75%; overflow: hidden; }
-.aspect-4-3 > img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

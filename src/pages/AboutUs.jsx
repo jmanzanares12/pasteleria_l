@@ -44,7 +44,7 @@ const AboutView = () => {
                         className="order-1 lg:order-2 rounded-[3rem] overflow-hidden shadow-2xl"
                     >
                         <div className="img-card">
-                            <img src={owner} alt="Panadería tradicional" className="img-cover img-cover--focus-top" />
+                            <img src={owner} alt="Lilliam Gaitán, fundadora de Pastelería Lilliam" className="w-full h-full object-cover object-top sepia-[0.2] hover:sepia-0 transition-all duration-700" />
                         </div>
                     </motion.div>
                 </div>
@@ -56,7 +56,7 @@ const AboutView = () => {
                         className="rounded-[3rem] overflow-hidden shadow-2xl"
                     >
                         <div className="img-card">
-                            <img src={pastry} alt="Pastelería creativa" className="img-cover img-cover--focus-center" />
+                            <img src={pastry} alt="Pastelería creativa" className="w-full h-full object-cover object-top sepia-[0.2] hover:sepia-0 transition-all duration-700"  />
                         </div>
                     </motion.div>
                     <motion.div 

@@ -1,36 +1,51 @@
-import { locations } from '../data/dataLocation.js';
-import { FiMapPin, FiClock } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+import { FiMapPin, FiClock, FiAlertCircle } from 'react-icons/fi';
+import { locations } from '../data/dataLocation';
 
-const LocationsCards = () => {
+const LocationCard = ({ location }) => {
     return (
-        <section className='max-w-7xl mx-auto mb-20 px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold text-gray-800 mb-12 text-center'>
-                Encuentranos en nuestras siguientes tiendas...
-            </h2>
-            <div className='grid gap-10 md:grid-cols-2 lg:grid-cols-3 items-center'>
-                {locations.map((location, index) => (
-                    <div key={index} className='bg-white p-6 rounded-2xl border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300'>
-                        <img src={location.image} alt={location.name} className='h-48 w-full object-cover rounded-2xl mb-4' />
-                        <div className='bg-rose-100 w-fit p-6 rounded-xl mb-4'>
-                            <FiMapPin className='h-8 w-8 text-rose-600' />
-                        </div>
-                        <h3 className='text-2xl font-bold text-gray-800 mb-2'>{location.name}</h3>
-                        <p className='text-gray-700 mb-4'>
-                            {location.address}
-                        </p>
-                        <div className='flex items-center text-gray-700 gap-2'>
-                            <FiClock className='text-rose-600 h-6 w-6' />
-                            <span>{location.hours}</span>
-                        </div>
-                        <div className='flex items-center text-gray-700 gap-2 mt-2'>
-                            <FiClock className='text-rose-600 h-6 w-6' />
-                            <span>{location.closed}</span>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </section>
-    )
-}
+        <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="group relative h-[450px] rounded-[3rem] overflow-hidden shadow-lg border border-white/20"
+        >
+            {/* Imagen de fondo */}
+            <img 
+                src={location.image} 
+                alt={location.name} 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            
+            {/* Overlay gradiente */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-export default LocationsCards;
+            {/* Contenido flotante */}
+            <div className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-[2rem] text-white">
+                <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-2xl font-bold tracking-tight">{location.name}</h3>
+                    <div className="bg-[var(--color-accent)] p-2 rounded-full">
+                        <FiMapPin className="text-white text-sm" />
+                    </div>
+                </div>
+
+                <div className="space-y-3 text-sm font-light">
+                    <p className="flex items-start gap-2 opacity-90">
+                        <span className="font-bold text-[var(--color-primary)] mt-1">•</span>
+                        {location.address}
+                    </p>
+                    <div className="flex items-center gap-2 opacity-90">
+                        <FiClock className="text-[var(--color-primary)]" />
+                        <span>{location.hours}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-rose-300 font-medium">
+                        <FiAlertCircle />
+                        <span>{location.closed}</span>
+                    </div>
+                </div>
+            </div>
+        </motion.div>
+    );
+};
+
+export default LocationCard;
