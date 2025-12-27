@@ -26,7 +26,6 @@ const Hero = () => {
             <Slider ref={sliderRef} {...sliderSettings}>
                 {sliderImages.map((item) => (
                     <div key={item.id} className='relative w-full h-[90vh] md:h-screen'>
-                        {/* Imagen con zoom sutil constante */}
                         <motion.img
                             src={item.image}
                             alt={item.alt}
@@ -36,10 +35,8 @@ const Hero = () => {
                             transition={{ duration: 6, ease: "easeOut" }}
                         />
                         
-                        {/* Overlay: Cambiamos el negro por un tono marca sutil o un degradado más suave */}
                         <div className='absolute inset-0 bg-gradient-to-r from-[var(--color-text)]/40 via-transparent to-transparent z-10' />
-                        
-                        {/* Content Container */}
+
                         <div className='absolute inset-0 z-20 flex flex-col justify-center px-6 md:px-20 lg:px-32'>
                             <div className='max-w-3xl'>
                                 <motion.span 
@@ -68,8 +65,7 @@ const Hero = () => {
                                 >
                                     En <span className="font-semibold">Pastelería Lilliam</span>, transformamos ingredientes de alta calidad en momentos inolvidables para tu paladar.
                                 </motion.p>
-
-                                {/* Call to Action (CTA) */}
+                                
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
