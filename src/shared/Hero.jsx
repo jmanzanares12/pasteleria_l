@@ -65,7 +65,7 @@ const Hero = () => {
                                 >
                                     En <span className="font-semibold">Pastelería Lilliam</span>, transformamos ingredientes de alta calidad en momentos inolvidables para tu paladar.
                                 </motion.p>
-                                
+
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ const Hero = () => {
                                         className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-[var(--color-primary-700)] transition-all shadow-lg shadow-[var(--color-primary)]/20 flex items-center gap-2 group"
                                         aria-label="Explorar menú"
                                     >
-                                        Explorar Menú
+                                        Explora nuestro catalogo
                                         <FiChevronRight className="group-hover:translate-x-1 transition-transform" />
                                     </Link>
 

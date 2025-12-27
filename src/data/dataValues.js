@@ -9,7 +9,7 @@ export const values = [
     {
         icon: FiEye,
         title: 'Vision',
-        text:'Ser reconocido por sus creaciones, por su talento y por su pasión por la calidad...'
+        text:'Ser reconocido por nuestras creaciones, por nuestro talento y por nuestra pasión por la calidad...'
     },
     {
         icon: FiHeart,

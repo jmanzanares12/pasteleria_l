@@ -80,7 +80,7 @@ const AboutView = () => {
             <section className="py-20 mt-20">
                 <div className="max-w-4xl mx-auto px-6 text-center italic">
                     <p className="text-2xl md:text-3xl text-[var(--color-text)] font-light leading-snug">
-                        "En Pastelería Lilliam, no solo horneamos pasteles; horneamos los recuerdos que te acompañarán toda la vida."
+                        "Cada pastel que creamos es una obra de amor, una fusión de tradición y creatividad que busca endulzar tus momentos más especiales."
                     </p>
                     <div className="mt-8 flex justify-center gap-2 text-[var(--color-accent)]">
                         <FiHeart fill="currentColor" />
