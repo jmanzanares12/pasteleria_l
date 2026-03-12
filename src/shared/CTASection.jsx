@@ -1,23 +1,45 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiStar } from 'react-icons/fi';
 
 const CTASection = ({ title, description, buttonText, redirectTo }) => {
     const navigate = useNavigate();
 
     return (
-        <section className='max-w-7xl mx-auto px-6 py-20'>
-            <div className='relative overflow-hidden bg-[var(--color-surface)] border border-[var(--color-primary)]/20 rounded-[3rem] p-10 md:p-20 text-center shadow-sm'>
+        <section className='max-w-7xl mx-auto px-6 py-24'>
+            <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className='relative overflow-hidden bg-white border border-[var(--color-primary)]/10 rounded-[4rem] p-12 md:p-24 text-center shadow-[0_40px_100px_-30px_rgba(0,0,0,0.05)]'
+            >
                 
-                {/* Decoración abstracta de fondo */}
-                <div className="absolute -top-24 -right-24 w-64 h-64 bg-[var(--color-accent)]/10 rounded-full blur-3xl" />
-                <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[var(--color-primary)]/10 rounded-full blur-3xl" />
+                {/* 1. Elementos Decorativos de Fondo Elevados */}
+                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-[var(--color-accent)]/5 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[500px] h-[500px] bg-[var(--color-primary)]/5 rounded-full blur-[120px] pointer-events-none" />
+                
+                {/* 2. Micro-detalle de estrellas para el toque artesanal */}
+                <div className="absolute top-10 left-10 text-[var(--color-accent)]/20 animate-pulse">
+                    <FiStar size={32} />
+                </div>
+                <div className="absolute bottom-10 right-10 text-[var(--color-primary)]/20 animate-bounce">
+                    <FiStar size={24} />
+                </div>
 
-                <div className='relative z-10 max-w-3xl mx-auto'>
+                <div className='relative z-10 max-w-3xl mx-auto space-y-8'>
+                    {/* Badge superior */}
+                    <motion.span 
+                        initial={{ opacity: 0, y: -10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        className="inline-block px-4 py-1.5 rounded-full bg-[var(--color-primary)]/5 text-[var(--color-primary)] font-black uppercase tracking-[0.3em] text-[9px]"
+                    >
+                        Paso Siguiente
+                    </motion.span>
+
                     <motion.h2 
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className='text-3xl md:text-5xl font-bold mb-6 text-[var(--color-text)] tracking-tight'
+                        className='text-4xl md:text-6xl font-bold text-[var(--color-text)] tracking-tighter leading-[0.95]'
                     >
                         {title}
                     </motion.h2>
@@ -26,22 +48,39 @@ const CTASection = ({ title, description, buttonText, redirectTo }) => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className='text-lg md:text-xl text-[var(--color-muted)] mb-10 leading-relaxed font-light'
+                        className='text-lg md:text-2xl text-[var(--color-muted)] leading-relaxed font-light italic font-serif'
                     >
-                        {description}
+                        "{description}"
                     </motion.p>
 
-                    <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className='bg-[var(--color-primary)] text-white px-10 py-4 rounded-full hover:bg-[var(--color-primary-700)] transition-all duration-300 text-xs font-bold uppercase tracking-[0.2em] shadow-xl shadow-[var(--color-primary)]/20 flex items-center gap-3 mx-auto group'
-                        onClick={() => navigate(redirectTo)}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="pt-6"
                     >
-                        {buttonText}
-                        <FiArrowRight className="text-lg group-hover:translate-x-1 transition-transform" />
-                    </motion.button>
+                        <motion.button
+                            whileHover={{ 
+                                scale: 1.05,
+                                backgroundColor: "var(--color-primary)",
+                                boxShadow: "0 20px 40px -10px rgba(var(--color-primary-rgb), 0.3)"
+                            }}
+                            whileTap={{ scale: 0.95 }}
+                            className='relative overflow-hidden bg-[var(--color-text)] text-white px-12 py-5 rounded-2xl transition-all duration-300 text-[10px] font-black uppercase tracking-[0.25em] shadow-2xl flex items-center gap-4 mx-auto group'
+                            onClick={() => navigate(redirectTo)}
+                        >
+                            {/* Efecto de brillo al pasar el mouse */}
+                            <div className="absolute inset-0 w-1/2 h-full bg-white/10 skew-x-[-25deg] -translate-x-full group-hover:translate-x-[250%] transition-transform duration-1000" />
+                            
+                            <span className="relative z-10">{buttonText}</span>
+                            <FiArrowRight className="text-xl relative z-10 group-hover:translate-x-2 transition-transform duration-500" />
+                        </motion.button>
+                    </motion.div>
                 </div>
-            </div>
+
+                {/* 3. Borde decorativo inferior */}
+                <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-[var(--color-accent)] to-transparent opacity-30" />
+            </motion.div>
         </section>
     );
 };
