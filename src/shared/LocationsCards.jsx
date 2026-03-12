@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { FiMapPin, FiClock, FiAlertCircle } from 'react-icons/fi';
-import { locations } from '../data/dataLocation';
 
 const LocationCard = ({ location }) => {
     return (

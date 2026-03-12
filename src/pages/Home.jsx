@@ -1,6 +1,5 @@
 import Hero from '../shared/Hero';
 import Values from '../shared/Values';
-import LocationsCards from '../shared/LocationsCards';
 import CTASection from '../shared/CTASection';
 
 

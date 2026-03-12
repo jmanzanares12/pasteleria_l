@@ -1,4 +1,4 @@
-import nightMasaya from '../assets/images/home-two.jpeg';
+import masaya from '../assets/images/masaya.avif';
 import homeGranada from '../assets/images/homeGranada.jpg';
 import homeDiriomo from '../assets/images/homeDiriomo.jpg';
 
@@ -8,7 +8,7 @@ export const locations = [
         address:'Mercado Municipal Ernesto Fernández, Mercado de Artesanias, Frente a Museo Camilo Ortega',
         hours: 'Lunes a Domingos de 6:00 am a 5:00 pm',
         closed: 'Miercoles: Cerrado',
-        image: nightMasaya
+        image: masaya
     },
     {
         name:'Granada',
