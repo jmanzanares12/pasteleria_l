@@ -5,7 +5,7 @@ import CTASection from '../shared/CTASection';
 
 const Home = () => {
     return(
-        <>
+        <div className='mt-4'>
             <Hero />
             <div className='px-4 sm:px6 lg:px-8 py-12'>
                 <Values />
@@ -16,7 +16,7 @@ const Home = () => {
                     redirectTo='/products'
                 />
             </div>
-        </>
+        </div>
     )
 };
 

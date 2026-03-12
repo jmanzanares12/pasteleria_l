@@ -1,10 +1,19 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
-import logo from '../assets/images/logo.png'; 
+import logo from '../assets/images/logo.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
+
+    // Efecto para cambiar el estilo al hacer scroll
+    useEffect(() => {
+        const handleScroll = () => setScrolled(window.scrollY > 20);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const navItems = [
         { name: 'Inicio', path: '/' },
@@ -14,74 +23,87 @@ const Header = () => {
     ];
 
     return (
-        <header className="fixed top-0 w-full z-50 bg-[var(--color-bg)]/80 backdrop-blur-md border-b border-[var(--color-primary)]/10" role="banner">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
+        <header 
+            className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+                scrolled 
+                ? 'bg-white/90 backdrop-blur-lg py-3 shadow-[var(--shadow-sm)]' 
+                : 'bg-transparent py-5'
+            }`}
+        >
+            <div className="max-w-7xl flex items-center justify-between mx-auto px-6 md:px-20 lg:px-32">
                 
-                {/* Brand / Logo */}
-                <div className="flex-shrink-0">
-                    <Link to='/' className='flex items-center gap-3 group' aria-label="Inicio - Pasteleria Lilliam">
-                        <div className="relative">
-                            <img 
-                                src={logo} 
-                                alt="Pasteleria Lilliam" 
-                                className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-[var(--color-primary)] transition-transform duration-300 group-hover:scale-105" 
-                            />
-                            <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity" />
-                        </div>
-                        <span className="text-[var(--color-primary-700)] font-bold text-lg md:text-xl tracking-tight leading-tight">
-                            Pastelería <span className="text-[var(--color-accent)]">Lilliam</span>
+                {/* Logo con estilo circular minimalista */}
+                <Link to='/' className="flex items-center gap-3 group">
+                    <div className="relative p-1">
+                        <img 
+                            src={logo} 
+                            alt="Logo" 
+                            className="w-10 h-10 md:w-12 md:h-12 " 
+                        />
+                    </div>
+                    <div className="flex flex-col">
+                        <span className="text-lg md:text-xl font-black tracking-tighter text-[var(--color-text)] leading-none">
+                            Pastelería
                         </span>
-                    </Link>
-                </div>
+                        <span className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-primary-700)] font-bold">
+                            Lilliam
+                        </span>
+                    </div>
+                </Link>
 
-                {/* Desktop Navigation */}
-                <nav className="hidden md:block" aria-label="Main navigation">
-                    <ul className="flex items-center gap-8">
+                {/* Navegación Desktop */}
+                <nav className="hidden md:block">
+                    <ul className="flex items-center gap-10">
+                        {navItems.map((item) => {
+                            const isActive = location.pathname === item.path;
+                            return (
+                                <li key={item.name}>
+                                    <Link 
+                                        to={item.path} 
+                                        className={`relative text-[11px] uppercase tracking-[0.2em] font-bold transition-all duration-300 hover:text-[var(--color-primary)] ${
+                                            isActive ? 'text-[var(--color-primary)]' : 'text-[var(--color-text)]/70'
+                                        }`}
+                                    >
+                                        {item.name}
+                                        {isActive && (
+                                            <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-[var(--color-accent)] rounded-full" />
+                                        )}
+                                    </Link>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </nav>
+
+                {/* Mobile Trigger */}
+                <button 
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="md:hidden text-2xl text-[var(--color-text)]"
+                >
+                    {isOpen ? <FiX /> : <FiMenu />}
+                </button>
+            </div>
+
+            {/* Mobile Menu con estilo moderno */}
+            {isOpen && (
+                <div className="md:hidden fixed inset-0 top-[64px] bg-white z-[60] p-8 animate-in fade-in slide-in-from-bottom-5 duration-500">
+                    <ul className="flex flex-col gap-8 items-center justify-center h-full">
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <Link 
                                     to={item.path} 
-                                    className="text-[var(--color-text)] text-sm font-semibold uppercase tracking-widest hover:text-[var(--color-primary)] transition-colors relative py-2 group"
+                                    className="text-3xl font-black text-[var(--color-text)] uppercase tracking-tighter hover:text-[var(--color-primary)]"
+                                    onClick={() => setIsOpen(false)}
                                 >
                                     {item.name}
-                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--color-accent)] transition-all duration-300 group-hover:w-full" />
                                 </Link>
                             </li>
                         ))}
                     </ul>
-                </nav>
-
-                {/* Mobile Menu Button */}
-                <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden p-2 rounded-lg text-[var(--color-primary-700)] hover:bg-[var(--color-primary)]/10 transition-colors"
-                    aria-label="Toggle menu"
-                >
-                    {isOpen ? <FiX className="text-2xl" /> : <FiMenu className="text-2xl" />}
-                </button>
-
-                {/* Mobile Menu Overlay */}
-                {isOpen && (
-                    <div className="md:hidden absolute top-20 left-0 w-full bg-[var(--color-bg)] border-b border-[var(--color-primary)]/10 shadow-xl py-6 px-6 animate-in fade-in slide-in-from-top-4 duration-300">
-                        <ul className="flex flex-col gap-6">
-                            {navItems.map((item) => (
-                                <li key={item.name}>
-                                    <Link 
-                                        to={item.path} 
-                                        className="block text-center text-lg font-medium text-[var(--color-text)] hover:text-[var(--color-primary)]"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        {item.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
-            </div>
+                </div>
+            )}
         </header>
     );
 };
 
 export default Header;
-
