@@ -32,7 +32,7 @@ const AppRoutes = () => {
                         <HomeView />
                     </React.Suspense>
                 }/>
-                <Route path="/aboutus" element={
+                <Route path="/about-us" element={
                     <React.Suspense fallback={<Loading />}>
                         <AboutUsView />
                     </React.Suspense>

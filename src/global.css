@@ -8,12 +8,11 @@
     --color-accent: #F2A9AD;            /* Rosa de las franjas */
     --color-cream: #FDF4F5;             /* Fondo muy suave con tinte rosado */
     --color-bg: #FFFFFF;                /* Blanco puro para limpieza */
-    --color-bg-footer: #082f36;        /* Fondo del footer con tinte cian muy sutil */
+    --color-bg-footer: #103150;        /* Fondo del footer con tinte cian muy sutil */
     --color-surface: #F9FDFE;           /* Superficie con tinte cian casi imperceptible */
     --color-text: #2D3748;              /* Gris oscuro azulado para legibilidad */
     --color-muted: #94A3B8;             /* Texto secundario */
     --radius: 16px;                       /* Esquinas más redondeadas = sensación más amigable/dulce */
-    
 }
 
 body {

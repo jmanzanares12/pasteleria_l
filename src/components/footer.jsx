@@ -26,8 +26,7 @@ const Footer = () => {
                     <div className="lg:col-span-4 space-y-6">
                         <Link to='/' className='inline-flex flex-col items-start gap-4 group'>
                             <div className="relative">
-                                <img src={logo} alt="Logo" className="w-20 h-20 rounded-full border-2 border-[var(--color-primary)]/20 group-hover:border-[var(--color-accent)] transition-all duration-500 shadow-sm" />
-                                <div className="absolute inset-0 rounded-full bg-[var(--color-accent)]/10 scale-0 group-hover:scale-110 transition-transform duration-500 -z-10"></div>
+                                <img src={logo} alt="Logo" className="w-20 h-20" />
                             </div>
                             <div>
                                 <h2 className="text-2xl font-bold tracking-tight text-[var(--color-primary-700)]">
@@ -50,7 +49,7 @@ const Footer = () => {
                     </div>
 
                     <div className="lg:col-span-2 space-y-6">
-                        <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[var(--color-primary-800)] border-b border-[var(--color-accent)]/30 pb-2 w-fit">Explorar</h3>
+                        <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white/70 border-b border-[var(--color-accent)] pb-2 w-fit">Explorar</h3>
                         <ul className="space-y-4">
                             {navLinks.map((link) => (
                                 <li key={link.name}>
@@ -64,13 +63,13 @@ const Footer = () => {
                     </div>
 
                     <div className="lg:col-span-3 space-y-6">
-                        <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[var(--color-primary-800)] border-b border-[var(--color-accent)]/30 pb-2 w-fit">Atención</h3>
+                        <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white/70 border-b border-[var(--color-accent)] pb-2 w-fit">Atención</h3>
                         <div className="space-y-4">
-                            <a href="tel:+50588174854" className="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--color-primary)]/5 transition-colors group">
+                            <a href="https://wa.me/50588174854" target="_blank" className="text-white/50 flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--color-primary)]/5 transition-colors group">
                                 <FaPhoneAlt className="text-[var(--color-accent)]" />
                                 <span className="text-sm font-medium">+505 8817 4854</span>
                             </a>
-                            <a href="mailto:pastelerialilliam@gmail.com" className="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--color-primary)]/5 transition-colors group">
+                            <a href="mailto:pastelerialilliam@gmail.com" className="text-white/50 flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--color-primary)]/5 transition-colors group">
                                 <MdEmail className="text-[var(--color-accent)] text-lg" />
                                 <span className="text-sm font-medium truncate">pastelerialilliam@gmail.com</span>
                             </a>
@@ -78,16 +77,11 @@ const Footer = () => {
                     </div>
 
                     <div className="lg:col-span-3 space-y-6">
-                        <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[var(--color-primary-800)] border-b border-[var(--color-accent)]/30 pb-2 w-fit">Visítanos</h3>
+                        <h3 className="text-xs font-black uppercase tracking-[0.2em] text-white/70 border-b border-[var(--color-accent)] pb-2 w-fit">Visítanos</h3>
                         <div className="bg-[var(--color-primary)]/5 p-4 rounded-2xl space-y-3">
                             <div className="flex gap-2 text-[var(--color-muted)]">
                                 <FaMapMarkerAlt className="text-[var(--color-accent)] shrink-0 mt-1" />
                                 <p className="text-sm leading-relaxed">Masaya, Nicaragua.<br/><span className="text-[10px] font-bold"></span></p>
-                            </div>
-                            <div className="pt-2 border-t border-[var(--color-primary)]/10">
-                                <p className="text-[11px] text-[var(--color-primary-700)] font-semibold text-center uppercase tracking-tighter">
-                                    Envíos en zona central
-                                </p>
                             </div>
                         </div>
                     </div>
