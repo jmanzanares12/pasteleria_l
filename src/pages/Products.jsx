@@ -12,7 +12,7 @@ const Products = () => {
     return (
         <main className="bg-[var(--color-bg)] min-h-screen pb-32">
             {/* Header de Sección con efecto parallax sutil */}
-            <header className="relative py-24 overflow-hidden">
+            <header className="relative py-16 md:py-24 overflow-hidden">
                 <div className="absolute inset-0 bg-[var(--color-primary)]/5 -skew-y-3 origin-left scale-110" />
                 <div className="relative max-w-7xl mx-auto px-6 text-center">
                     <motion.div
@@ -25,29 +25,28 @@ const Products = () => {
                         <h1 className="text-5xl md:text-7xl font-bold text-[var(--color-text)] mb-6 tracking-tighter">
                             Nuestro <span className="text-[var(--color-accent)] italic font-serif text-6xl md:text-8xl">Menú</span>
                         </h1>
-                        <p className="max-w-xl mx-auto text-[var(--color-muted)] font-light text-lg italic leading-relaxed">
+                        <p className="max-w-xl mx-auto text-[var(--color-muted)] font-light text-base md:text-lg italic leading-relaxed">
                             "Seleccionamos los ingredientes más frescos para crear momentos inolvidables en tu mesa."
                         </p>
                     </motion.div>
                 </div>
             </header>
 
-            {/* Selector de Categorías (Tabs) */}
-            <nav className="sticky top-20 z-30 bg-[var(--color-bg)]/80 backdrop-blur-md py-6 mb-12 border-y border-[var(--color-primary)]/5">
-                <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-3">
+            {/* Selector de Categorías (Tabs) - Responsive con Scroll Horizontal Oculto */}
+            <nav className="sticky top-20 z-30 bg-[var(--color-bg)]/80 backdrop-blur-md py-6 mb-8 md:mb-12 border-y border-[var(--color-primary)]/5">
+                <div className="max-w-7xl mx-auto px-6 flex overflow-x-auto gap-3 pb-2 snap-x md:flex-wrap md:justify-center [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                     {categories.map(cat => (
                         <button
                             key={cat}
                             onClick={() => setActiveTab(cat)}
-                            className={`relative px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 overflow-hidden ${
-                                activeTab === cat 
-                                ? "text-white" 
-                                : "text-[var(--color-muted)] hover:text-[var(--color-primary)]"
-                            }`}
+                            className={`relative px-6 md:px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 overflow-hidden whitespace-nowrap snap-center shrink-0 ${activeTab === cat
+                                    ? "text-white"
+                                    : "text-[var(--color-muted)] hover:text-[var(--color-primary)]"
+                                }`}
                         >
                             <span className="relative z-10">{cat}</span>
                             {activeTab === cat && (
-                                <motion.div 
+                                <motion.div
                                     layoutId="activeTab"
                                     className="absolute inset-0 bg-[var(--color-primary)] shadow-lg shadow-[var(--color-primary)]/30"
                                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
@@ -60,9 +59,9 @@ const Products = () => {
 
             {/* Grid de Productos */}
             <section className="max-w-7xl mx-auto px-6">
-                <motion.div 
+                <motion.div
                     layout
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
                 >
                     <AnimatePresence mode='popLayout'>
                         {productData[activeTab]?.map((prod, index) => (
@@ -73,12 +72,12 @@ const Products = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                                className="group relative bg-white p-10 rounded-[3rem] border border-gray-200 rounded-[2rem] p-6 flex flex-col justify-between hover:shadow-2xl hover:shadow-[var(--color-primary)]/10 transition-all duration-500"
+                                className="group relative bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border border-gray-200 flex flex-col justify-between hover:shadow-2xl hover:shadow-[var(--color-primary)]/10 transition-all duration-500 overflow-hidden"
                             >
                                 {/* Decoración de fondo de tarjeta */}
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-accent)]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-[var(--color-primary)]/5 transition-colors" />
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-accent)]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-[var(--color-primary)]/5 transition-colors pointer-events-none" />
 
-                                <div className="relative z-10 ">
+                                <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-6">
                                         {prod.tag ? (
                                             <span className="text-[9px] bg-[var(--color-accent)] text-white px-3 py-1 rounded-full font-black uppercase tracking-widest shadow-sm">
@@ -88,30 +87,30 @@ const Products = () => {
                                         <FiArrowRight className="text-[var(--color-primary)]/20 group-hover:text-[var(--color-primary)] transition-colors transform group-hover:translate-x-2" />
                                     </div>
 
-                                    <img src={prod.image} alt={prod.name} className="w-full h-auto mb-4 rounded-2xl" />
+                                    <img src={prod.image} alt={prod.name} className="w-full h-48 md:h-auto object-cover mb-6 rounded-2xl shadow-sm" />
 
-                                    <h3 className="text-2xl font-bold text-[var(--color-text)] mb-4 group-hover:text-[var(--color-primary)] transition-colors">
+                                    <h3 className="text-xl md:text-2xl font-bold text-[var(--color-text)] mb-3 group-hover:text-[var(--color-primary)] transition-colors">
                                         {prod.name}
                                     </h3>
-                                    
-                                    <p className="text-[var(--color-muted)] text-[13px] leading-relaxed mb-8 opacity-80 font-normal">
+
+                                    <p className="text-[var(--color-muted)] text-[13px] leading-relaxed mb-6 md:mb-8 opacity-80 font-normal">
                                         {prod.desc}
                                     </p>
-                                    
+
                                     {(prod.specs || prod.fillings) && (
-                                        <div className="space-y-3 mb-8">
+                                        <div className="space-y-3 mb-6 md:mb-8">
                                             {prod.specs && (
                                                 <div className="flex items-center gap-3 p-3 rounded-2xl bg-[var(--color-surface)] border border-[var(--color-primary)]/5">
-                                                    <div className="p-2 rounded-xl bg-white text-[var(--color-primary)] shadow-sm">
-                                                        <FiShoppingBag className="text-sm"/>
+                                                    <div className="p-2 rounded-xl bg-white text-[var(--color-primary)] shadow-sm shrink-0">
+                                                        <FiShoppingBag className="text-sm" />
                                                     </div>
                                                     <span className="text-[11px] font-bold text-[var(--color-text)] uppercase tracking-tighter opacity-70 italic">{prod.specs}</span>
                                                 </div>
                                             )}
                                             {prod.fillings && (
                                                 <div className="flex items-center gap-3 p-3 rounded-2xl bg-[var(--color-primary)]/[0.03] border border-[var(--color-primary)]/5">
-                                                    <div className="p-2 rounded-xl bg-white text-[var(--color-accent)] shadow-sm">
-                                                        <FiInfo className="text-sm"/>
+                                                    <div className="p-2 rounded-xl bg-white text-[var(--color-accent)] shadow-sm shrink-0">
+                                                        <FiInfo className="text-sm" />
                                                     </div>
                                                     <span className="text-[11px] font-bold text-[var(--color-text)] uppercase tracking-tighter opacity-70 italic">{prod.fillings}</span>
                                                 </div>
@@ -121,10 +120,10 @@ const Products = () => {
                                 </div>
 
                                 {prod.note && (
-                                    <div className="relative z-10 mt-auto pt-6 border-t border-[var(--color-primary)]/5">
-                                        <p className="text-[10px] text-[var(--color-accent)] font-black uppercase italic flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />
-                                            Nota: {prod.note}
+                                    <div className="relative z-10 mt-auto pt-5 border-t border-[var(--color-primary)]/5">
+                                        <p className="text-[10px] text-[var(--color-accent)] font-black uppercase italic flex items-start gap-2">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse mt-1 shrink-0" />
+                                            <span>Nota: {prod.note}</span>
                                         </p>
                                     </div>
                                 )}
@@ -134,25 +133,25 @@ const Products = () => {
                 </motion.div>
             </section>
 
-            {/* Banner de Personalización Mejorado */}
-            <section className="max-w-5xl mx-auto px-6 mt-32">
-                <div className="relative overflow-hidden bg-[var(--color-primary)] rounded-[4rem] p-12 md:p-20 text-center">
+            {/* Banner de Personalización */}
+            <section className="max-w-5xl mx-auto px-6 mt-20 md:mt-32">
+                <div className="relative overflow-hidden bg-[var(--color-primary)] rounded-[3rem] md:rounded-[4rem] p-8 md:p-20 text-center">
                     {/* Círculos decorativos de fondo */}
                     <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
                     <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[var(--color-accent)]/20 rounded-full blur-3xl" />
-                    
+
                     <div className="relative z-10">
-                        <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tighter">
+                        <h3 className="text-2xl md:text-5xl font-bold text-white mb-4 md:mb-6 tracking-tighter">
                             ¿Tienes una idea especial?
                         </h3>
-                        <p className="text-white/70 max-w-2xl mx-auto font-light text-lg italic mb-12 leading-relaxed">
+                        <p className="text-white/80 max-w-2xl mx-auto font-light text-sm md:text-lg italic mb-8 md:mb-12 leading-relaxed">
                             Cualquier tamaño mayor a 1lb o diseños exclusivos se trabajan bajo pedido personalizado. Cuéntanos tu sueño y lo hornearemos para ti.
                         </p>
                         <Link
                             to="/contact"
-                            className="inline-flex items-center gap-3 bg-[var(--color-accent)]/70 text-white px-10 py-5 rounded-full font-black uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-[var(--color-primary)] transition-all duration-500 shadow-xl"
+                            className="inline-flex justify-center items-center gap-3 bg-[var(--color-accent)]/90 md:bg-[var(--color-accent)]/70 text-white px-6 md:px-10 py-4 md:py-5 rounded-full font-black uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-[var(--color-primary)] transition-all duration-500 shadow-xl w-full md:w-auto"
                         >
-                            Crear mi pedido personalizado <FiArrowRight />
+                            Crear mi pedido personalizado <FiArrowRight className="shrink-0" />
                         </Link>
                     </div>
                 </div>
