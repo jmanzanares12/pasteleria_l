@@ -64,7 +64,6 @@ const Contact = () => {
                     <p className="text-[var(--color-muted)] mt-3 text-sm md:text-base">Encuentra tu Pastelería Lilliam más cercana</p>
                 </div>
 
-                {/* Grid de sucursales ajustable */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {locations.map((loc, index) => (
                         <motion.div
@@ -94,7 +93,7 @@ const Contact = () => {
                                 title="WhatsApp"
                                 value="+505 8817 4854"
                                 link="https://wa.me/50588174854"
-                                color="bg-[#25D366]" // Verde oficial WhatsApp
+                                color="bg-[#25D366]"
                             />
 
                             <ContactMethod

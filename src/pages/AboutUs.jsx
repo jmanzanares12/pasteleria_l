@@ -11,13 +11,11 @@ const AboutUs = () => {
         offset: ["start end", "end start"]
     });
 
-    // Suavizamos el efecto para que en móvil no sea tan brusco
     const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
     const scale = useTransform(scrollYProgress, [0, 0.2], [0.95, 1]);
 
     return (
         <main ref={targetRef} className="bg-[var(--color-bg)] overflow-hidden">
-            {/* Header de Sección */}
             <section className="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-12 md:pb-16 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -34,7 +32,6 @@ const AboutUs = () => {
                 </motion.div>
             </section>
 
-            {/* Stats Card - Ajustada para 2x2 en móvil */}
             <section className="max-w-5xl mx-auto px-6 mb-20 md:mb-24">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-4 py-10 rounded-[2rem] border border-gray-100 bg-white/50 shadow-sm mb-16">
                     {[
@@ -53,7 +50,6 @@ const AboutUs = () => {
 
             <section className="max-w-7xl mx-auto px-6 space-y-24 md:space-y-32 pb-24">
 
-                {/* Bloque 1: El Origen */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -91,7 +87,6 @@ const AboutUs = () => {
                     </motion.div>
                 </div>
 
-                {/* Bloque 2: La Evolución */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -133,7 +128,6 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            {/* Cita Final */}
             <section className="py-20 md:py-32 relative overflow-hidden mb-20">
                 <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
                     <FiHeart className="text-3xl md:text-4xl text-[var(--color-accent)] mx-auto mb-8 opacity-40" />

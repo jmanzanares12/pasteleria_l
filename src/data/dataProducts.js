@@ -18,13 +18,30 @@ export const dataProducts = {
             specs: 'Disponible en: 1lb y 2lb',
             fillings: 'Rellenos de: dulce de leche.',
             note: 'Aplica para pedidos personalizados.',
-            tag: 'Refrescante y delicioso'
+            tag: 'Refrescante y delicioso',
+            image: pastel
         }
 
     ],
     Pan: [
-        { name: "Pan de Molde", desc: "Variedad en forma cuadrada y redonda, ideal para sándwiches." },
-        { name: "Pan de Cena & Bonetes", desc: "Suaves, frescos y horneados cada mañana." },
-        { name: "Barras Artesanales", desc: "Crocantes por fuera, suaves por dentro." }
+        { 
+            name: "Pan de Molde", 
+            desc: "Variedad en forma cuadrada y redonda, ideal para sándwiches.",
+            note: "Perfecto para desayunos y meriendas.",
+            tag: "¡Nuestro pan más popular!"
+        },
+        { 
+            name: "Pan de Cena & Bonetes", 
+            desc: "Suaves, frescos y horneados cada mañana.",
+            note: "Acompañan perfectamente tus comidas.",
+            tag: "¡El complemento ideal!"
+        },
+        { 
+            name: "Barras Artesanales", 
+            desc: "Crocantes por fuera, suaves por dentro.",
+            note: "Ideales para acompañar tu café o té.",
+            tag: "¡Un deleite para tu paladar!"
+            
+        }
     ]
 }

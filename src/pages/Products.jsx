@@ -11,7 +11,6 @@ const Products = () => {
 
     return (
         <main className="bg-[var(--color-bg)] min-h-screen pb-32">
-            {/* Header de Sección con efecto parallax sutil */}
             <header className="relative py-16 md:py-24 overflow-hidden">
                 <div className="absolute inset-0 bg-[var(--color-primary)]/5 -skew-y-3 origin-left scale-110" />
                 <div className="relative max-w-7xl mx-auto px-6 text-center">
@@ -32,7 +31,6 @@ const Products = () => {
                 </div>
             </header>
 
-            {/* Selector de Categorías (Tabs) - Responsive con Scroll Horizontal Oculto */}
             <nav className="sticky top-20 z-30 bg-[var(--color-bg)]/80 backdrop-blur-md py-6 mb-8 md:mb-12 border-y border-[var(--color-primary)]/5">
                 <div className="max-w-7xl mx-auto px-6 flex overflow-x-auto gap-3 pb-2 snap-x md:flex-wrap md:justify-center [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                     {categories.map(cat => (
@@ -57,7 +55,6 @@ const Products = () => {
                 </div>
             </nav>
 
-            {/* Grid de Productos */}
             <section className="max-w-7xl mx-auto px-6">
                 <motion.div
                     layout
@@ -74,7 +71,6 @@ const Products = () => {
                                 transition={{ duration: 0.4, delay: index * 0.05 }}
                                 className="group relative bg-white p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border border-gray-200 flex flex-col justify-between hover:shadow-2xl hover:shadow-[var(--color-primary)]/10 transition-all duration-500 overflow-hidden"
                             >
-                                {/* Decoración de fondo de tarjeta */}
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-accent)]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-[var(--color-primary)]/5 transition-colors pointer-events-none" />
 
                                 <div className="relative z-10">
@@ -133,10 +129,8 @@ const Products = () => {
                 </motion.div>
             </section>
 
-            {/* Banner de Personalización */}
             <section className="max-w-5xl mx-auto px-6 mt-20 md:mt-32">
                 <div className="relative overflow-hidden bg-[var(--color-primary)] rounded-[3rem] md:rounded-[4rem] p-8 md:p-20 text-center">
-                    {/* Círculos decorativos de fondo */}
                     <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
                     <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[var(--color-accent)]/20 rounded-full blur-3xl" />
 
