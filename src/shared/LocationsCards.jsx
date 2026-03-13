@@ -1,79 +1,65 @@
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiMapPin, FiClock, FiAlertCircle, FiArrowUpRight } from 'react-icons/fi';
+import { FiArrowRight, FiStar } from 'react-icons/fi';
 
-const LocationCard = ({ location }) => {
+const CTASection = ({ title, description, buttonText, redirectTo = '/' }) => {
+    const navigate = useNavigate();
+
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="group relative h-[480px] rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 bg-gray-900"
-        >
-            <img
-                src={location.image}
-                alt={location.name}
-                className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:rotate-1"
-            />
+        <section className='max-w-7xl mx-auto px-6 py-20 overflow-hidden'>
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                className='relative overflow-hidden bg-white border border-gray-100 rounded-[3rem] md:rounded-[4rem] p-10 md:p-24 text-center shadow-[0_40px_100px_-30px_rgba(0,0,0,0.03)]'
+            >
+                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[400px] h-[400px] bg-[var(--color-accent)]/10 rounded-full blur-[100px] pointer-events-none" />
+                <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[400px] h-[400px] bg-[var(--color-primary)]/10 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-
-            <div className="absolute top-6 right-6">
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                    <span className="text-[10px] text-white uppercase font-bold tracking-widest">Sucursal Activa</span>
+                <div className="absolute top-8 left-8 text-[var(--color-accent)]/20 animate-pulse hidden sm:block">
+                    <FiStar size={32} />
                 </div>
-            </div>
+                <div className="absolute bottom-8 right-8 text-[var(--color-primary)]/20 animate-bounce hidden sm:block">
+                    <FiStar size={24} />
+                </div>
 
-            <div className="absolute bottom-5 left-5 right-5">
-                <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-7 rounded-[2.5rem] text-white transition-all duration-500 group-hover:bg-white/15 group-hover:-translate-y-2">
+                <div className='relative z-10 max-w-3xl mx-auto space-y-10'>
+                    <motion.span
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        className="inline-block px-5 py-2 rounded-full bg-gray-50 text-[var(--color-primary)] font-black uppercase tracking-[0.3em] text-[9px] border border-gray-100"
+                    >
+                        Paso Siguiente
+                    </motion.span>
 
-                    <div className="flex justify-between items-start mb-5">
-                        <div className="space-y-1">
-                            <h3 className="text-3xl font-extrabold tracking-tight leading-none group-hover:text-[var(--color-accent)] transition-colors">
-                                {location.name}
-                            </h3>
-                            <p className="text-[var(--color-accent)] text-[10px] uppercase tracking-[0.3em] font-black">
-                                Nicaragua
-                            </p>
-                        </div>
-                        <a
-                            href={`https://maps.google.com/?q=${location.address}`}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="bg-[var(--color-accent)] p-3 rounded-2xl hover:scale-110 transition-transform shadow-lg shadow-[var(--color-accent)]/30"
+                    <h2 className='text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 tracking-tighter leading-[1] md:leading-[0.9]'>
+                        {title}
+                    </h2>
+
+                    <p className='text-lg md:text-2xl text-gray-500 leading-relaxed font-light italic font-serif max-w-2xl mx-auto'>
+                        "{description}"
+                    </p>
+
+                    <div className="pt-6">
+                        <motion.button
+                            whileHover={{
+                                scale: 1.05,
+                                boxShadow: "0 20px 40px -15px rgba(0,0,0,0.2)"
+                            }}
+                            whileTap={{ scale: 0.98 }}
+                            className='relative overflow-hidden bg-gray-900 text-white px-10 py-5 rounded-2xl transition-all duration-300 text-[10px] font-black uppercase tracking-[0.25em] flex items-center gap-4 mx-auto group shadow-xl'
+                            onClick={() => navigate(redirectTo)}
                         >
-                            <FiArrowUpRight className="text-white text-xl" />
-                        </a>
-                    </div>
+                            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
-                    <div className="space-y-4">
-                        <div className="flex items-start gap-3 opacity-95 group/info">
-                            <div className="mt-1 p-1 bg-white/10 rounded-lg group-hover/info:bg-[var(--color-accent)]/20 transition-colors">
-                                <FiMapPin className="text-[var(--color-accent)] text-sm" />
-                            </div>
-                            <p className="text-sm leading-relaxed font-medium text-gray-100">
-                                {location.address}
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                            <div className="flex items-center gap-2">
-                                <FiClock className="text-[var(--color-accent)] shrink-0" />
-                                <span className="text-[11px] font-bold uppercase tracking-wider">{location.hours}</span>
-                            </div>
-
-                            <div className="flex items-center gap-2 text-rose-300">
-                                <FiAlertCircle className="shrink-0" />
-                                <span className="text-[11px] font-bold uppercase tracking-wider italic">{location.closed}</span>
-                            </div>
-                        </div>
+                            <span className="relative z-10">{buttonText}</span>
+                            <FiArrowRight className="text-xl relative z-10 group-hover:translate-x-1.5 transition-transform duration-300" />
+                        </motion.button>
                     </div>
                 </div>
-            </div>
-        </motion.div>
+            </motion.div>
+        </section>
     );
 };
 
-export default LocationCard;
+export default CTASection;

@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiShoppingBag, FiInfo, FiArrowRight } from 'react-icons/fi';
 import { dataProducts as productData } from '../data/dataProducts';
 import { Link } from 'react-router-dom';
+import Container from '../shared/Container';
+import CTASection from '../shared/LocationsCards';
 
 const categories = Object.keys(productData);
 
@@ -128,28 +130,17 @@ const Products = () => {
                     </AnimatePresence>
                 </motion.div>
             </section>
-
-            <section className="max-w-5xl mx-auto px-6 mt-20 md:mt-32">
-                <div className="relative overflow-hidden bg-[var(--color-primary)] rounded-[3rem] md:rounded-[4rem] p-8 md:p-20 text-center">
-                    <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-                    <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[var(--color-accent)]/20 rounded-full blur-3xl" />
-
-                    <div className="relative z-10">
-                        <h3 className="text-2xl md:text-5xl font-bold text-white mb-4 md:mb-6 tracking-tighter">
-                            ¿Tienes una idea especial?
-                        </h3>
-                        <p className="text-white/80 max-w-2xl mx-auto font-light text-sm md:text-lg italic mb-8 md:mb-12 leading-relaxed">
-                            Cualquier tamaño mayor a 1lb o diseños exclusivos se trabajan bajo pedido personalizado. Cuéntanos tu sueño y lo hornearemos para ti.
-                        </p>
-                        <Link
-                            to="/contact"
-                            className="inline-flex justify-center items-center gap-3 bg-[var(--color-accent)]/90 md:bg-[var(--color-accent)]/70 text-white px-6 md:px-10 py-4 md:py-5 rounded-full font-black uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-[var(--color-primary)] transition-all duration-500 shadow-xl w-full md:w-auto"
-                        >
-                            Crear mi pedido personalizado <FiArrowRight className="shrink-0" />
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            
+            <section>
+                <Container>
+                    <CTASection
+                        title="¿Listo para tu orden del día?"
+                        description="Comunicate con nosotros, tomaremos nota y realizaremos tu pedido."
+                        buttonText="Contactar"
+                        redirectTo="/contact"
+                    />
+                </Container>
+            </section>            
         </main>
     );
 };
