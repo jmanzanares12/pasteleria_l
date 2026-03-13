@@ -8,7 +8,7 @@ const ContactMethod = ({ icon: Icon, title, value, link, color }) => (
         href={link} 
         target="_blank" 
         rel="noopener noreferrer"
-        className="flex items-center gap-6 p-6 bg-white rounded-[2rem] border border-[var(--color-primary)]/10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+        className="flex items-center gap-6 p-6 bg-white rounded-[2rem] border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
     >
         <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-white shadow-lg ${color}`}>
             <Icon size={24} />
@@ -91,7 +91,7 @@ const Contact = () => {
                             title="Correo Electrónico"
                             value="pastelerialilliam@gmail.com"
                             link="mailto:pastelerialilliam@gmail.com"
-                            color="bg-[var(--color-primary)]"
+                            color="bg-[var(--color-primary)]" 
                         />
                     </div>
                     <motion.div

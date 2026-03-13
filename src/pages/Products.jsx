@@ -73,12 +73,12 @@ const Products = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                                className="group relative bg-white p-10 rounded-[3rem] border border-[var(--color-primary)]/5 flex flex-col justify-between hover:shadow-2xl hover:shadow-[var(--color-primary)]/10 transition-all duration-500"
+                                className="group relative bg-white p-10 rounded-[3rem] border border-gray-200 rounded-[2rem] p-6 flex flex-col justify-between hover:shadow-2xl hover:shadow-[var(--color-primary)]/10 transition-all duration-500"
                             >
                                 {/* Decoración de fondo de tarjeta */}
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-accent)]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-[var(--color-primary)]/5 transition-colors" />
 
-                                <div className="relative z-10">
+                                <div className="relative z-10 ">
                                     <div className="flex justify-between items-start mb-6">
                                         {prod.tag ? (
                                             <span className="text-[9px] bg-[var(--color-accent)] text-white px-3 py-1 rounded-full font-black uppercase tracking-widest shadow-sm">
@@ -87,6 +87,8 @@ const Products = () => {
                                         ) : <div />}
                                         <FiArrowRight className="text-[var(--color-primary)]/20 group-hover:text-[var(--color-primary)] transition-colors transform group-hover:translate-x-2" />
                                     </div>
+
+                                    <img src={prod.image} alt={prod.name} className="w-full h-auto mb-4 rounded-2xl" />
 
                                     <h3 className="text-2xl font-bold text-[var(--color-text)] mb-4 group-hover:text-[var(--color-primary)] transition-colors">
                                         {prod.name}

@@ -1,6 +1,6 @@
 import masaya from '../assets/images/masaya.avif';
-import homeGranada from '../assets/images/homeGranada.jpg';
-import homeDiriomo from '../assets/images/homeDiriomo.jpg';
+import homeGranada from '../assets/images/homeGranada.avif';
+import homeDiriomo from '../assets/images/homeDiriomo.avif';
 
 export const locations = [
     {

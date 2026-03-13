@@ -37,7 +37,7 @@ const Values = () => (
                             delay: index * 0.15,
                             ease: [0.21, 0.47, 0.32, 0.98] 
                         }}
-                        className="group relative bg-white border border-[var(--color-primary)]/5 rounded-[2.5rem] p-10 transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(var(--color-primary-rgb),0.1)] overflow-hidden"
+                        className="group relative bg-white border border-gray-200 rounded-[2.5rem] p-10 transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(var(--color-primary-rgb),0.1)] overflow-hidden"
                     >
                         <div className="absolute -top-10 -right-10 w-32 h-32 bg-[var(--color-accent)]/5 rounded-full blur-3xl group-hover:bg-[var(--color-accent)]/15 transition-all duration-700" />
                         
@@ -70,7 +70,7 @@ const Values = () => (
         <motion.div 
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
-            className="w-1/2 h-px bg-gradient-to-r from-transparent via-[var(--color-primary)]/20 to-transparent mx-auto mt-24"
+            transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
         />
     </section>
 )

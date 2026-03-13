@@ -1,8 +1,8 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { FiAward, FiHeart, FiStar, FiCheckCircle } from 'react-icons/fi';
-import owner from '../assets/images/abuelita.png'
-import pastry from '../assets/images/pastel.png'
+import owner from '../assets/images/abuelita.avif'
+import pastry from '../assets/images/pastel.avif'
 
 const AboutUs = () => {
     const targetRef = useRef(null);
@@ -33,7 +33,7 @@ const AboutUs = () => {
             </section>
 
             <section className="max-w-5xl mx-auto px-6 mb-24">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-y border-[var(--color-primary)]/10">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 rounded-xl border border-gray-200 mb-16">
                     {[
                         { label: 'Años de Panadería', val: '30+' },
                         { label: 'Maestría Pastelera', val: '15+' },
@@ -128,7 +128,7 @@ const AboutUs = () => {
             </section>
 
             {/* Cita Final con Background suave */}
-            <section className="py-16 relative overflow-hidden">
+            <section className="py-16 relative overflow-hidden mb-24">
                 <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
                     <FiHeart className="text-4xl text-[var(--color-accent)] mx-auto mb-8 opacity-50" />
                     <h3 className="text-2xl md:text-4xl text-[var(--color-text)] font-serif italic leading-relaxed">

@@ -1,3 +1,7 @@
+import pastel from '../assets/images/pastel.avif'
+import pioquinto from '../assets/images/pioquinto.avif'
+import tresleches from '../assets/images/tresleches.avif'
+import muscafe from '../assets/images/muscafe.avif'
 
 export const dataProducts = {
     Pasteles: [
@@ -7,7 +11,8 @@ export const dataProducts = {
             specs: 'Disponible en: 2oz, 4oz, 1/4lb y 1lb',
             fillings: 'Rellenos de: dulce de leche, mermelada de fresa, crema pastelera, chocolate o piña.',
             note: 'Pedidos mayores a 1lb cuentan como pastel personalizado.',
-            tag: 'El favorito de nuestros clientes'
+            tag: 'El favorito de nuestros clientes',
+            image: pastel
         }
     ],
     Helados: [
@@ -20,10 +25,9 @@ export const dataProducts = {
         }
     ],
     Postres: [
-        { name: "Tres Leches", desc: "El balance perfecto de humedad y dulzor." },
-        { name: "Pío Quinto", desc: "Tradición nicaragüense con nuestra receta secreta." },
-        { name: "Sopa Borracha", desc: "Un clásico infaltable en nuestras vitrinas." },
-        { name: "Mousse de Café/Fresa", desc: "Ligero, aireado y frutal." }
+        { name: "Tres Leches", desc: "El balance perfecto de humedad y dulzor.", image: tresleches },
+        { name: "Pío Quinto", desc: "Tradición nicaragüense con nuestra receta secreta.", image: pioquinto  },
+        { name: "Mousse de Café/Fresa", desc: "Ligero, aireado y frutal.", image: muscafe }
     ],
     Repostería: [
         { name: 'Popular', desc: 'Variedad de repostería tradicional: polvoron, punto rojo, raquetas de piña y mas...' },
