@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiShoppingBag, FiInfo, FiArrowRight } from 'react-icons/fi';
 import { dataProducts as productData } from '../data/dataProducts';
-import { Link } from 'react-router-dom';
-import Container from '../shared/Container';
 import CTASection from '../shared/LocationsCards';
 
 const categories = Object.keys(productData);
@@ -40,8 +38,8 @@ const Products = () => {
                             key={cat}
                             onClick={() => setActiveTab(cat)}
                             className={`relative px-6 md:px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 overflow-hidden whitespace-nowrap snap-center shrink-0 ${activeTab === cat
-                                    ? "text-white"
-                                    : "text-[var(--color-muted)] hover:text-[var(--color-primary)]"
+                                ? "text-white"
+                                : "text-[var(--color-muted)] hover:text-[var(--color-primary)]"
                                 }`}
                         >
                             <span className="relative z-10">{cat}</span>
@@ -130,17 +128,15 @@ const Products = () => {
                     </AnimatePresence>
                 </motion.div>
             </section>
-            
+
             <section>
-                <Container>
-                    <CTASection
-                        title="¿Listo para tu orden del día?"
-                        description="Comunicate con nosotros, tomaremos nota y realizaremos tu pedido."
-                        buttonText="Contactar"
-                        redirectTo="/contact"
-                    />
-                </Container>
-            </section>            
+                <CTASection
+                    title="¿Listo para tu orden del día?"
+                    description="Comunicate con nosotros, tomaremos nota y realizaremos tu pedido."
+                    buttonText="Contactar"
+                    redirectTo="/contact"
+                />
+            </section>
         </main>
     );
 };
