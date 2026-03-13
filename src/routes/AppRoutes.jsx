@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Loading from '../components/Loading';
-import Layout from './layout';
+import Layout from './Layout.jsx';
 
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
