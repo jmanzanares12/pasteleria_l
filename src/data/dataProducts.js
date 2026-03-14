@@ -9,7 +9,7 @@ export const dataProducts = {
             fillings: 'Rellenos de: dulce de leche, mermelada de fresa, crema pastelera, chocolate o piña.',
             note: 'Pedidos mayores a 1lb cuentan como pastel personalizado.',
             tag: 'El favorito de nuestros clientes',
-            image: pastel
+            
         },
 
         {
@@ -19,7 +19,7 @@ export const dataProducts = {
             fillings: 'Rellenos de: dulce de leche.',
             note: 'Aplica para pedidos personalizados.',
             tag: 'Refrescante y delicioso',
-            image: pastel
+        
         }
 
     ],
