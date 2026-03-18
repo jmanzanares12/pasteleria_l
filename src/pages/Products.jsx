@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiShoppingBag, FiInfo, FiArrowRight } from 'react-icons/fi';
 import { dataProducts as productData } from '../data/dataProducts';
-import CTASection from '../shared/LocationsCards';
+import CTASection from '../shared/CTASection';
 
 const categories = Object.keys(productData);
 
