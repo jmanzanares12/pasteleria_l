@@ -6,75 +6,44 @@ const CTASection = ({ title, description, buttonText, redirectTo }) => {
     const navigate = useNavigate();
 
     return (
-        <section className='max-w-7xl mx-auto px-6 py-14'>
+        <section className='max-w-5xl mx-auto px-8 py-10 '>
             <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className='relative overflow-hidden bg-white border border-gray-200 rounded-[4rem] p-12 md:p-24 text-center shadow-[0_40px_100px_-30px_rgba(0,0,0,0.05)]'
+                className='relative overflow-hidden bg-white border border-gray-100 rounded-[2.5rem] p-8 md:p-16 text-center shadow-[0_30px_60px_-15px_rgba(0,0,0,0.03)]'
             >
 
-                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-[var(--color-accent)]/5 rounded-full blur-[120px] pointer-events-none" />
-                <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[500px] h-[500px] bg-[var(--color-primary)]/5 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-80 h-80 bg-[var(--color-accent)]/10 rounded-full blur-[80px] pointer-events-none" />
+                <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-80 h-80 bg-[var(--color-primary)]/10 rounded-full blur-[80px] pointer-events-none" />
 
-                <div className="absolute top-10 left-10 text-[var(--color-accent)]/20 animate-pulse">
-                    <FiStar size={32} />
-                </div>
-                <div className="absolute bottom-10 right-10 text-[var(--color-primary)]/20 animate-bounce">
-                    <FiStar size={24} />
-                </div>
-
-                <div className='relative z-10 max-w-3xl mx-auto space-y-8'>
+                <div className='relative z-10 max-w-2xl mx-auto space-y-6'>
                     <motion.span
-                        initial={{ opacity: 0, y: -10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        className="inline-block px-4 py-1.5 rounded-full bg-[var(--color-primary)]/5 text-[var(--color-primary)] font-black uppercase tracking-[0.3em] text-[9px]"
+                        className="inline-block px-3 py-1 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] font-bold uppercase tracking-widest text-[10px]"
                     >
                         Paso Siguiente
                     </motion.span>
 
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        className='text-4xl md:text-6xl font-bold text-[var(--color-text)] tracking-tighter leading-[0.95]'
-                    >
+                    <h2 className='text-3xl md:text-5xl font-bold text-[var(--color-text)] tracking-tight'>
                         {title}
-                    </motion.h2>
+                    </h2>
 
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className='text-lg md:text-2xl text-[var(--color-muted)] leading-relaxed font-light italic font-serif'
-                    >
+                    <p className='text-base md:text-lg text-[var(--color-muted)] leading-relaxed font-serif italic'>
                         "{description}"
-                    </motion.p>
+                    </p>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="pt-6"
-                    >
+                    <div className="pt-4">
                         <motion.button
-                            whileHover={{
-                                scale: 1.05,
-                                backgroundColor: "var(--color-primary)",
-                                boxShadow: "0 20px 40px -10px rgba(var(--color-primary-rgb), 0.3)"
-                            }}
-                            whileTap={{ scale: 0.95 }}
-                            className='relative overflow-hidden bg-[var(--color-text)] text-white px-12 py-5 rounded-2xl transition-all duration-300 text-[10px] font-black uppercase tracking-[0.25em] shadow-2xl flex items-center gap-4 mx-auto group'
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className='bg-[var(--color-text)] text-white px-10 py-4 rounded-xl text-xs font-bold uppercase tracking-widest shadow-xl flex items-center gap-3 mx-auto group transition-all'
                             onClick={() => navigate(redirectTo)}
                         >
-                            <div className="absolute inset-0 w-1/2 h-full bg-white/10 skew-x-[-25deg] -translate-x-full group-hover:translate-x-[250%] transition-transform duration-1000" />
-
-                            <span className="relative z-10">{buttonText}</span>
-                            <FiArrowRight className="text-xl relative z-10 group-hover:translate-x-2 transition-transform duration-500" />
+                            <span>{buttonText}</span>
+                            <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
                         </motion.button>
-                    </motion.div>
+                    </div>
                 </div>
-
-                <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-[var(--color-accent)] to-transparent opacity-30" />
             </motion.div>
         </section>
     );

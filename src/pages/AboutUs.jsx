@@ -62,14 +62,14 @@ const AboutUs = () => {
                             <FiAward className="text-xl" /> Desde 1996
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] leading-tight">
-                            El Origen: <br /> El Aroma del Pan Recién Horneado
+                            El Origen: <br /> El Aroma de la Tradición
                         </h2>
                         <div className="space-y-4 text-[var(--color-muted)] text-base md:text-lg leading-relaxed font-light">
                             <p>
-                                Todo comenzó con <strong className="font-semibold text-[var(--color-primary)]">Lilliam Gaitán</strong>. Lo que empezó en un pequeño horno casero, movido por la pasión de alimentar corazones, se convirtió en el pilar de nuestra familia.
+                                Todo comenzó con la visión y las manos de <strong className="font-semibold text-[var(--color-primary)]">Lilliam Gaitán</strong>. Lo que inició en un pequeño horno casero, impulsado por la genuina pasión de alimentar corazones, se convirtió rápidamente en el pilar fundamental de nuestra familia.
                             </p>
                             <p>
-                                La clave nunca cambió: granos seleccionados, procesos lentos y el respeto absoluto por la masa madre.
+                                A lo largo de los años, nuestra esencia ha permanecido intacta: el uso de granos seleccionados, el respeto absoluto por los procesos lentos y la maestría en el manejo de la masa madre para ofrecer un producto auténtico y honesto.
                             </p>
                         </div>
                     </motion.div>
@@ -82,7 +82,7 @@ const AboutUs = () => {
                             <img src={owner} alt="Lilliam Gaitán" className="w-full h-full object-cover sepia-[0.2] hover:sepia-0 transition-all duration-700 scale-110 hover:scale-100" />
                         </div>
                         <div className="absolute -bottom-6 -left-2 md:-left-6 bg-white p-5 md:p-6 rounded-2xl shadow-xl border border-[var(--color-primary)]/10 max-w-[240px] md:max-w-xs">
-                            <p className="text-[var(--color-primary)] font-serif italic text-lg md:text-xl">"Calidad sobre cantidad, siempre."</p>
+                            <p className="text-[var(--color-primary)] font-serif italic text-lg md:text-xl">"Calidad y responsabilidad, siempre."</p>
                         </div>
                     </motion.div>
                 </div>
@@ -110,11 +110,16 @@ const AboutUs = () => {
                         className="space-y-8"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text)] leading-tight">
-                            La Evolución: <br /> El Arte de los Pasteles
+                            La Evolución: <br /> El Arte en cada Detalle
                         </h2>
-                        <p className="text-[var(--color-muted)] text-base md:text-lg leading-relaxed font-light">
-                            Hace 15 años, el azúcar se convirtió en nuestro lienzo. Evolucionamos de la panadería tradicional a la <span className="text-[var(--color-primary)] font-bold italic">pastelería de autor</span>, donde cada pedido cuenta una historia diferente.
-                        </p>
+                        <div className="space-y-4 text-[var(--color-muted)] text-base md:text-lg leading-relaxed font-light">
+                            <p>
+                                Hace 15 años decidimos expandir nuestros horizontes y el azúcar se convirtió en nuestro nuevo lienzo. Evolucionamos de la panadería tradicional hacia la <span className="text-[var(--color-primary)] font-bold italic">pastelería de autor</span>, integrando técnicas modernas con el sabor de siempre.
+                            </p>
+                            <p>
+                                Hoy, no solo horneamos pasteles; creamos piezas personalizadas donde cada pedido cuenta una historia única, celebrando con vos los momentos más especiales de tu vida.
+                            </p>
+                        </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6">
                             {['Bodas de Ensueño', 'Cumpleaños Temáticos', 'Eventos Corporativos', 'Diseños de Autor'].map((item, i) => (
@@ -128,7 +133,7 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            <section className="py-20 md:py-32 relative overflow-hidden mb-20">
+            <section className="py-18 md:py-32 relative overflow-hidden mb-18">
                 <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
                     <FiHeart className="text-3xl md:text-4xl text-[var(--color-accent)] mx-auto mb-8 opacity-40" />
                     <h3 className="text-xl md:text-4xl text-[var(--color-text)] font-serif italic leading-relaxed px-4">

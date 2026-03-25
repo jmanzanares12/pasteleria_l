@@ -91,7 +91,7 @@ const Contact = () => {
                             <ContactMethod
                                 icon={FiMessageCircle}
                                 title="WhatsApp"
-                                value="+505 8817 4854"
+                                value="8817 4854"
                                 link="https://wa.me/50588174854"
                                 color="bg-[#25D366]"
                             />
@@ -99,7 +99,7 @@ const Contact = () => {
                             <ContactMethod
                                 icon={FiPhone}
                                 title="Llamada Directa"
-                                value="+505 8817 4854"
+                                value="8817 4854"
                                 link="tel:+50588174854"
                                 color="bg-blue-500"
                             />
@@ -107,8 +107,8 @@ const Contact = () => {
                             <ContactMethod
                                 icon={FiMail}
                                 title="Correo Electrónico"
-                                value="pastelerialilliam@gmail.com"
-                                link="mailto:pastelerialilliam@gmail.com"
+                                value="info.pastelerialilliam@gmail.com"
+                                link="mailto:info.pastelerialilliam@gmail.com"
                                 color="bg-[var(--color-primary)]"
                             />
                         </div>

@@ -70,13 +70,13 @@ const Footer = () => {
                                 <div className="p-2 bg-[var(--color-primary)]/10 rounded-lg">
                                     <FaPhoneAlt className="text-[var(--color-primary)] text-xs" />
                                 </div>
-                                <span className="text-sm font-bold text-white/50">+505 8817 4854</span>
+                                <span className="text-sm font-bold text-white/50">8817 4854</span>
                             </a>
-                            <a href="mailto:pastelerialilliam@gmail.com" className="flex items-center gap-3 p-3 rounded-xl hover:bg-[var(--color-primary)]/10 transition-colors group">
+                            <a href="mailto:info.pastelerialilliam@gmail.com" className="flex items-center gap-3 p-3 rounded-xl hover:bg-[var(--color-primary)]/10 transition-colors group">
                                 <div className="p-2 bg-[var(--color-primary)]/10 rounded-lg">
                                     <MdEmail className="text-[var(--color-primary)] text-sm" />
                                 </div>
-                                <span className="text-sm font-bold text-white/50 truncate">pastelerialilliam@gmail.com</span>
+                                <span className="text-sm font-bold text-white/50 truncate">info.pastelerialilliam@gmail.com</span>
                             </a>
                         </div>
                     </div>
