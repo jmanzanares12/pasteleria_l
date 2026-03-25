@@ -66,7 +66,7 @@ const Hero = () => {
                             </Link>
 
                             <Link
-                                to="/aboutus"
+                                to="/about-us"
                                 className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold uppercase text-[10px] md:text-xs tracking-widest hover:bg-white hover:text-black transition-all text-center"
                             >
                                 Nuestra Historia

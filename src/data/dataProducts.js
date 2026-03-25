@@ -20,6 +20,16 @@ export const dataProducts = {
             note: 'Aplica para pedidos personalizados.',
             tag: 'Refrescante y delicioso',
         
+        },
+
+        {
+            image: pastel,
+            name: 'Pastel Personalizado',
+            desc: 'Ícono de nuestra casa, pastel personalizado con ingredientes y procesos selectos para eventos especiales.',
+            specs: 'Disponible en: 1lb y 2lb',
+            fillings: 'Rellenos a gusto y seleccion del cliente',
+            note: 'Encargar con 5 dias de anticipación.',
+            tag: 'Nuestro producto estrella'
         }
 
     ],

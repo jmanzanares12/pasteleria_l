@@ -15,7 +15,7 @@ const Footer = () => {
     ];
 
     const socialLinks = [
-        { icon: <FaFacebookF />, url: 'https://facebook.com', color: 'hover:bg-blue-600' },
+        { icon: <FaFacebookF />, url: 'https://www.facebook.com/profile.php?id=100070706032861', color: 'hover:bg-blue-600' },
         { icon: <FaWhatsapp />, url: 'https://wa.me/50588174854', color: 'hover:bg-green-500' },
     ];
 
